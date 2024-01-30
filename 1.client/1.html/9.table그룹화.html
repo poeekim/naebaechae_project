@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 그룹화</title>
+</head>
+<!-- 
+        테이블(table, tr, td, th) + 본문(상단, 본문, 하단) 접목(소계)
+
+        thead : 표의 머리글
+        tbody : 중간에 배치 가능
+        tfoot : 내부에 하나 이상 또는 그 이상의 tr태그를 가지고 있어야함.
+
+        ex) table>thead>tr>th*3>tfoot>tr>td*3>tbody>tr*2>td*3
+
+     -->
+
+<body>
+    <center>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>HTML강의</th>
+                    <th>CSS강의</th>
+                    <th>JavaScript강의</th>
+                </tr>
+            </thead>
+            <tfoot> <!-- foot 이므로 가장 아래 단락에 나타남-->
+                <tr>
+                    <td>HTML 고급</td>
+                    <td>CSS 고급</td>
+                    <td>JavaScript고급</td>
+                </tr>
+            </tfoot>
+            <tbody> <!-- 본문 최소 한개 이상의 tr 존재해야함-->
+                <tr>
+                    <td>HTML 초급</td>
+                    <td>CSS 초급</td>
+                    <td>JavaScript초급</td>
+                </tr>
+                <tr>
+                    <td>HTML 중급</td>
+                    <td>CSS 중급</td>
+                    <td>JavaScript중급</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        함수를 왜 만들어야하는가?
+        > 기본적으로 프로그램을 만들 떄, 코드 양이 늘어갈 수록 개발시간도 늘어남
+        그러므로 함수를 만듦으로써 추후에 함수를 재사용하여 개발시간을 축소시킬 수 있음.    
+        
+        */
+
+        let x = 10;
+        let y = 30;
+
+        document.write("x + y = " + (x + y) + "<br>");
+        document.write("x - y = " + (x - y) + "<br>");
+        document.write("x * y = " + (x * y) + "<br>");
+        document.write("x / y = " + (x / y) + "<br>");
+
+        document.write("----------------------------" + "<br>");
+
+        function calculator(x, y) {
+            document.write("x + y = " + (x + y) + "<br>");
+            document.write("x - y = " + (x - y) + "<br>");
+            document.write("x * y = " + (x * y) + "<br>");
+            document.write("x / y = " + (x / y) + "<br>");
+            document.write("----------------------------" + "<br>");
+        }
+
+        
+
+        calculator(10,40);
+        calculator(5,8);
+        calculator(21,3);
+        calculator(7,40);
+        
+
+
+    </script>
+</body>
+
+</html>

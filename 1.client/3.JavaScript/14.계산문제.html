@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 계산문제</title>
+    <script>
+        function sum() {
+
+            
+            /* 
+            표현식) windows.document.폼이름.폼내부속성의name값.value
+                ex. document.myForm.kor.value
+                -> 사용자로부터 입력 받은 국어 점수
+            */
+            // let k = document.myForm.kor.value; //국어점수
+            // let e = document.myForm.eng.value; //영어점수
+            // let m = document.myForm.mat.value; //수학점수
+            
+            let k = parseInt(document.myForm.kor.value); //국어점수
+            let e = parseInt(document.myForm.eng.value); //영어점수
+            let m = parseInt(document.myForm.mat.value); //수학점수
+
+            // 웹상에서 입력 받은 값은 기본으로 String이다. 
+            // 고로 k+e+m 을 하면 문자열이 나오므로 해당 값을 숫자로 바꿔줘야함.
+            // 문자열-> 숫자 : parseInt(정수)    /    parseFloat()
+
+
+            // let total = parseInt(k)+parseInt(e)+parseInt(m);
+            let total = k+e+m;
+            console.log(total)
+            alert("합계 : " + total);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form action="cal.jsp" name="myForm">
+        국어 : <input type="text" name="kor"><br>
+        영어 : <input type="text" name="eng"><br>
+        수학 : <input type="text" name="mat">
+        <p></p>
+        <input type="button" value="점수출력" onclick="sum()">
+    </form>
+</body>
+
+</html>

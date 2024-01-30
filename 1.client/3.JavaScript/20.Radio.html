@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio 버튼</title>
+    <script>
+        /* 
+        
+        */
+
+        function test(){
+            if(document.myForm.ok[0].checked == true){
+                alert("첫번쨰 그림 선택");
+            }else if(document.myForm.ok[1].checked == true){
+                alert("두번쨰 그림 선택");
+            }else if(document.myForm.ok[2].checked == true){
+                alert("세번쨰 그림 선택");
+            }else
+            alert("3개 그림 중 하나는 택해야함");
+            
+        }
+    </script>
+</head>
+<body>
+            <!-- 
+        radio 버튼에 name 속성값을 ok 하나로 설정해도 되는 이유 : 3중 1개만 선택할 것이므로.
+        name 속성값에 값을 설정해 주지 않을 경우 세개를 다 선택할 수 있음.
+
+        ok = new Array("1.gif","2.gif","3.gif"); 와 같음.
+        -->
+    <form name="myForm"> 
+        <input type="radio" name="ok" id=""><img src="../../images/1.gif" alt="">
+        <p></p>
+        <input type="radio" name="ok" id=""><img src="../../images/2.gif" alt="">
+        <p></p>
+        <input type="radio" name="ok" id=""><img src="../../images/3.gif" alt="">
+        <p></p>
+        <input type="button" value="결재" onclick="test()">
+    </form>
+</body>
+</html>

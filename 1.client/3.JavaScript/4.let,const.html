@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let,const 의 차이점</title>
+</head>
+
+<body>
+    <script>
+        /*
+        const - 상수(변하지 않는 값)
+        1. const 를 사용하기 위해선 반드시 상수화 된 값으로 초기화.
+
+
+
+        let, var, const -> 값을 저장할 수 있는 변수
+        let, const -> 중복선언 불가
+                        블럭내부에서 변수 선언시, 블럭 내부에서만 사용가능(=지역변수)
+    
+        
+
+        */
+
+    // const 는 변수 선언과 동시에 값을 할당하여 초기화 시켜야 함.
+    const name = "이름"
+    let num1; // 변수 선언 (값은 할당 X)
+    num1 = 123; // 초기화    
+    
+    document.write("num1 : "+ num1 +"<br>");
+
+    document.write("--------------const 의 특징----------------" +"<br>");
+    const NUM2 = 234;
+    document.write("NUM2 : "+ NUM2 +"<br>");
+    //NUM2 = 456;
+    //document.write("NUM2 : "+ NUM2 +"<br>"); 
+    // 이미 상수화 된 변수는 값이 변경 되지 않으므로 해당 write 명령은 정상적으로 실행되지 않음.
+
+    {
+
+        const string1 = "김";
+        const string2 = "이";
+        const string3 = "박";
+        document.write("string1 : "+ string1 +"<br>"); 
+        document.write("string2 : "+ string2 +"<br>"); 
+        document.write("string3 : "+ string3 +"<br>"); 
+
+    }
+
+    // 아래 write 문은 오류 발생 = string1 ,string2, string3 은 지역 변수
+    document.write("string1 : "+ string1 +"<br>"); 
+        document.write("string2 : "+ string2 +"<br>"); 
+        document.write("string3 : "+ string3 +"<br>"); 
+
+
+
+        
+    </script>
+
+</body>
+
+</html>

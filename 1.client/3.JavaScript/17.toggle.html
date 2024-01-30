@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle_과제 답</title>
+
+    <script>
+        function toggle() {
+
+            // 1. document.form이름.버튼이름(입력양식).속성명(value)
+            // -> document.f.b_name.value = 네이버
+
+            let b_val = document.f.b_name.value;
+
+            /*     첫번째 방법
+            
+                    if(b_val=="네이버")
+                        document.f.b_name.value="다음";
+                    else //다음
+                        document.f.b_name.value="네이버";  
+                    
+            */
+
+            //      두번째 방법
+            let text = (b_val == "네이버") ? "다음" : "네이버";
+            document.f.b_name.value = text;
+
+        }
+
+    </script>
+</head>
+
+
+
+<body>
+    <!-- 
+    2024.01.29
+    버튼을 누를 때마다 네이버 -> 다음 -> 네이버 -> 다음.. 으로 
+    계속 바뀌도록 설정하라
+
+-->
+
+    <center>
+        <h1>버튼을 눌러주세요</h1>
+        <form name="f">
+            <input type="button" value="네이버" name="b_name" onclick="toggle()">
+
+        </form>
+    </center>
+</body>
+
+</html>

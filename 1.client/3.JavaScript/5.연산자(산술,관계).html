@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자(산술,관계)</title>
+</head>
+<body>
+    
+
+    <script>
+        /**/ 
+        // 여러 줄 주석 단축키  -> alt shift a
+        document.write("<h2>산술, 관계연산자</h2><p>");
+            /*
+            연산자란?
+                연산(계산)을 하기 위한 기호.
+
+            1. 산술 연산자
+                + - * / % 
+                항 + 항 = 결과  : 이항산술연산자
+                -n , n, ++, -- : 단항산술연산자
+
+            2. 관계연산자(=비교연산자)
+                > < >= <=
+                4>5 (false), 5>4 (true)
+                5==5 , 5!=4
+
+            !! 언제 변수가 필요한걸까
+            > 입출력 프로그램을 작성하는 경우
+            > 계산하는 경우
+            > 현재 프로그램의 상태를 기억해야 할 때
+            ex. 그림판 클릭해야만 그려지도록 
+            -> mouseclick=false;
+                if(mouseclic=true){
+                    system.draw;
+                }
+
+            */
+            
+            // + 예시
+            let res = 10 + 30;
+            document.write("res : "+res);
+
+            // - 예시
+            res = 10 - 30;
+            document.write("----------------------------" +"<br>");
+            document.write("res : "+res);
+
+            // * 예시
+            res = 10 * 30;
+            document.write("----------------------------" +"<br>");
+            document.write("res : "+res);
+
+            // / 예시
+            res = 10 / 30;
+            document.write("----------------------------" +"<br>");
+            document.write("res : "+res);
+
+            // % 예시
+            res = 4 % 3;
+            document.write("----------------------------" +"<br>");
+            document.write("res : "+res+"<br>");
+            
+            document.write("------------관계연산자 예시----------------" +"<br>");
+
+            // 관계연산자 예시
+            let a, b, c;
+            a=5, b=10;
+            c=a+b;
+            document.write("a+b = "+c+"<br>"); // 15
+            c=a>b; 
+            document.write("c=a>b 결과 => "+ c +"<br>"); //false
+            c=a<b;
+            document.write("결과 => "+ c +"<br>"); //true
+            
+            c=a==b;
+            document.write("c의 값은" + c+"<br>"); //false
+    </script>
+
+
+
+</body>
+</html>

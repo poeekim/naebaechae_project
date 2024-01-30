@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 속성단위 </title>
+    <style>
+        /* 
+        CSS 에서 사용하는 단위
+
+        1. 절대단위 -> cm | mm | pt(point) 
+        2. 상대단위 -> px(모니터 상 점의 개수) | % | em
+        3. 기본단위 -> px(글자를 기준). 1em = 100% = 16px
+        */
+
+        #test {
+            font-size: 20px;
+            border: 5px dotted green;
+        }
+
+        p {
+            font-size: 2em;
+            text-decoration: underline;
+            color: red;
+        }
+
+        div>p {
+            /* div 태그 안에 p 태그만 적용시키는 방법 (div>p) */
+            font-size: 10px;
+        }
+
+        section>div {
+            color: blue;
+        }
+
+        p+em {
+            /* 바로 인접한 태그만 적용시키는 방법( 태그+태그) */
+            background-color: blueviolet;
+            font-size: 60px;
+        }
+
+        em+em {
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>단위 연습</div>
+    <div id="test">상위 div 부분
+        <p>하위 p 부분</p>
+    </div>
+    <p>하위 p 부분2</p>
+    <em>하위 p 부분3</em>
+    <em>하위 p 부분4</em>
+    <br>
+    <br>
+    <section>
+        <div>헤이헤이
+            <p>이건되냐</p>
+            <div>p 태그 안에 div</div>
+        </div>
+    </section>
+</body>
+
+</html>

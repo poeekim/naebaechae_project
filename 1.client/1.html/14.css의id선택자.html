@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  # -> id를 뜻함 */
+    
+        #y {
+            /* text-indent : 들여쓰기
+             */
+            color: blue;
+            text-indent: 100px;
+            font-size: 20pt;
+            margin: auto;
+            font-style: oblique;
+    
+        }
+    
+        div#x {
+            font-family: impact;
+            /* div 태그 중에서 id가 x 인 태그 찾기*/
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="background-color: red;">id값은 원칙적으로 유일한 값이기 때문에, 중복허용 불가능 x</h2>
+    <h1>html5에서 추가된 속성</h1>
+
+    <p></p>
+    <h1 id="y">h1태그 - id 값이 y인 경우</h1>
+    <p></p>
+    <h1 id="x">h1태그 - id 값이 x인 경우</h1>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <div id="y"> div 태그 - id 값이 y인 경우</div>
+    <p></p>
+    <div id="x"> div 태그 - id 값이 x인 경우</div>
+    <p></p>
+    <p></p>
+
+
+    <fieldset>
+        <legend>회원가입정보</legend> <!-- legend : 묶어줄때의 타이틀제목 -->
+        이름: <input type="text" name="name" id=""><br>
+        비번: <input type="password" name="pw" id=""><br>
+        메일: <input type="email" name="email" id=""><br>
+    </fieldset>
+
+</body>
+
+</html>

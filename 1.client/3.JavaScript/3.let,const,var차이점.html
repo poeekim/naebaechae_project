@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let, const, var 의 차이점</title>
+
+    <script>
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <script>
+        /*
+        데이터형 = 자료형 = type
+        ->  데이터 저장 시 데이터의 종류, 크기를 지정해주는 것.
+        ex. String, char, int, float, double, long, boolean, 
+        (자바스크립트는 해당 type 을 지정하지 않아도 됨. but 그 외 java, c# 등은 필수)
+
+        !!
+        var 의 특징
+        1. 중복 선언이 가능(=재정의) -> 권장X. 
+        2. 블록 내부 선언된 변수를 외부에서 출력이 가능
+
+        */
+
+        var num = 100;
+        var name = "김"
+
+        // alert(num+name); //100김
+
+        document.write("num : "+ num+"<br>");
+        {
+            // 블럭 : 선언된 변수를 사용할 수 있는 범위지정
+
+            var num = 123; // 동일한 변수를 한번 더 선언하는 것 (= 중복선언)
+
+        }
+        document.write("num : "+ num +"<br>");
+
+        document.write("--------------let 의 특징----------------" +"<br>");
+        let num2 = 789;
+        document.write("num2 : "+ num2+"<br>"); // 789
+
+        // 디버그 (debug)
+        console.log("num2 : "+ num2+"<br>"); // f12 -> console 창에서 확인가능
+
+        {
+            // 블럭 내부에서 선언한 let 함수는 외부에서 사용 X (중복선언 불가)
+            let num2 = 456;
+            let test = 789; //  지역변수
+            document.write("블럭 내 num2 : "+ num2+"<br>");
+            document.write("블럭 외 test : "+ test+"<br>");
+        }
+        document.write("블럭 외 num2 : "+ num2+"<br>"); 
+        // document.write("블럭 외 test : "+ test+"<br>"); // 안나옴
+
+    </script>
+</body>
+
+</html>

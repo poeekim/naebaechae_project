@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+
+        let now = new Date(); // 현재 시간 
+        console.log(now);
+        const year = now.getFullYear(); // 올해년도
+        console.log(year);
+
+
+        function inputValueChange() { // Id 속성값으로 해당 값 가져오기
+
+            var inputValue = document.getElementById('inputValue').value;
+            console.log(inputValue);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!-- table>(thead>tr>th*3)+(tfoot>tr>td*3)+tbody>tr*2>td*3 -->
+
+    <!-- text 박스에 입력된 text 값 가져오기 -->
+    이름: <input type="text" id="inputValue" onchange="inputValueChange()">
+
+    <input type="button" value="${inputValue}">sdf 
+    <!-- 텍스트 박스에 적은 string 변수값을 버튼에 적히도록 하려고함 -->
+
+
+
+</body>
+
+</html>

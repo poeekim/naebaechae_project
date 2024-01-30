@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 속성</title>
+    <style>
+    /* 
+    positon(영역 설정)
+            : static (기본값)
+            : absoluted(절대(?)적인 위치값) - left, top, width, height
+            : relative(상대적인 좌표 방법 - left, top 값이 설정되지 않으면 static 과 비슷함)
+                좌측상단을 기준으로 자신과 가장 가까운 컨텐츠를 참조함..(잘 모르겠음..)
+            : fixed (고정위치)
+    */
+
+    .fix {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        border: solid blue;
+        background-color: hotpink;
+    }
+
+    #fix_right {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .rel1 {
+        position: relative;
+        top: -30px;
+        left: 40px;
+        /* right: 100px; */
+    }
+    
+    .rel2 {
+        position: absolute;
+        top: 80px;
+        right: 50px;
+    }
+
+    
+    .rel3 {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        /* right: 100px; */
+    }
+    </style>
+</head>
+
+<body>
+    <div style=" background-color: red; width: 60px;height: 60px;"></div>
+    <div style=" background-color: yellow; width: 60px;height: 60px;"> </div>
+    <div class="fix">fixed_string</div>
+    <div style=" background-color: aqua; width: 60px;height: 60px;"></div>
+    <p><p></p></p>
+    <div style=" background-color: red; width: 60px;height: 60px;"></div>
+    <div style=" background-color: rgb(5, 133, 12); width: 60px;height: 60px;" class="rel1"> </div>
+    <div id="fix_right" style=" background-color: black; width: 60px;height: 60px;" class="rel3"></div>
+    <div style=" background-color: blue; width: 60px;height: 60px;" class="rel1"></div>
+    <p><p></p></p>
+    <div id="fix_right">asdf</div>
+    <div style="position:absolute; background-color: orange; left: 120px;top: 120px;width: 60px;height: 60px;"></div>
+    <div style="position:relative; background-color: rgb(200, 10, 0); left: 40px;top: 30px;width: 60px;height: 60px;"></div>
+    <div style="position:relative; background-color: purple; left:100px;top:50px;width: 60px;height: 60px;"></div>
+</body>
+</html>

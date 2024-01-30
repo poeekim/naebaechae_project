@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> div, span 태그의 차이점</title>
+    <style>
+        /* 
+        - div
+        자동 줄바꿈( =block 태그. ex) h1 태그)
+        구역을 설정할 때 사용(widht, height로 구체적인 크기를 설정해 주어야함.
+        block 태그이므로, 화면 내 line의 전체 구역을 기본값으로 갖기 때문.)
+
+
+        - span
+        자동 줄바꿈 X ( =inline 태그. ex) i 태그)
+        width, height 사용 x -> 화면 내 에러 메시지 출력시 사용(jQuery)
+        글자 length 부분까지만 구역으로 인식함.
+        
+        
+        display : block;
+                : inline; 
+        (block 태그인 div 태그에 inline 설정값을 적용해야 할 때는,
+        css 내에 display:inline; 을 넣어주면됨)
+
+            
+        
+        */
+
+        div{
+            background-color: green;
+            /* display: inline;
+            width: 100pt;
+            height: 50pt;
+             */
+            
+        }
+
+        span{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>DIV 태그와 SPAN 태그의 차이</h1>
+
+    <!-- 태그명*n -> n개의 태그가 생성 
+    -->
+    
+    <div> div 태그 연습1 </div>
+    <div> div 태그 연습2 </div>
+    <div> div 태그 연습3 </div>
+
+    <hr>
+
+    <span> span 태그 연습1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br>
+    <span> span 태그 연습2</span><br>
+    <span> span 태그 연습3</span>
+
+</body>
+</html>

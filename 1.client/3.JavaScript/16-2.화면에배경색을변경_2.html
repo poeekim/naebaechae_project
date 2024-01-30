@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면에 배경색을 변경2</title>
+    <style>
+        div#box1 {
+            border: 2px solid black;
+            width: 250px;
+            height: 250px;
+            /* background-color: aqua; */
+        }
+    </style>
+
+    <script>
+/* 
+        let setRed = function(){ // 빨강으로 바꿈
+            let change = document.getElementById("box1");
+            change.style.backgroundColor = "red";
+            
+        }
+
+        function setGreen(){ // 초록으로 바꿈
+            let change = document.getElementById("box1");
+            change.style.backgroundColor = "green";
+        }
+
+        function setBlue(){ // 파랑으로 바꿈
+            let change = document.getElementById("box1");
+            change.style.backgroundColor = "blue";
+        }
+ */
+        function setColor(color){
+            let change = document.getElementById("box1");
+            // change.style.backgroundColor = color;
+            //조건식에 따라서 색깔을 다 다르게 설정(다중 if)
+
+            if(color == "red")
+            change.style.background = color;
+            else if(color == "green")
+            change.style.background = color;
+            else
+            change.style.background = color;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+<!--     <input type="button" value="red" onclick="setRed()">
+    <input type="button" value="green" onclick="setGreen()">
+    <input type="button" value="blue" onclick="setBlue()"> -->
+    <input type="button" value="red" onclick="setColor('red')">
+    <input type="button" value="green" onclick="setColor('green')">
+    <input type="button" value="blue" onclick="setColor('blue')">
+
+    <p></p>
+
+    <div id="box1"></div>
+    <!-- <div id="box2"></div>
+    <div id="box3"></div> -->
+</body>
+
+</html>

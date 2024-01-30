@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Box</title>
+    <script>
+        /* 
+        
+        */
+
+        function test() {
+            let sel = "";
+            if ((document.myForm.a1.checked == false) &&
+                (document.myForm.a2.checked == false) &&
+                (document.myForm.a3.checked == false)) { //아무것도 선택되지 않았을 때
+                alert("무조건 하나는 선택해라");
+            } else { // 적어도 한개는 선택됐을 때
+                if (document.myForm.a1.checked) {
+                    sel = sel+" 1번 ";
+                }if (document.myForm.a2.checked) {
+                    sel=sel + " 2번 ";
+                }if (document.myForm.a3.checked) {
+                    sel=sel + " 3번 ";
+                }
+                alert("선택한 모든 값 : " + sel);
+            }
+
+        }
+    </script>
+</head>
+
+<body oncontextmenu = "return false";
+oncontextmenu = "return false"
+oncontextmenu = "return false">
+
+
+    <!-- 
+    화면 디자인한 이미지나, 글등을 우클릭, 드래그 금지
+        oncontextmenu = " return false" -> 마우스 복붙 금지
+        ondragstart = "return false"드래그 금지
+        onselectstart = "retruen false" 블럭지정(=선택)금지
+        
+     -->
+    
+
+    <!-- 
+        checkbox 는 radio 와 달리, 여러개를 동시에 선택할 수 있다.
+        = 각각 따로 저장하는 변수가 필요하다. (a1, a2, a3 로 정의함)
+
+        -->
+
+    <form name="myForm">
+        <input type="checkbox" name="a1" id=""><img src="../../images/1.gif" alt="">
+        <p></p>
+        <input type="checkbox" name="a2" id=""><img src="../../images/2.gif" alt="">
+        <p></p>
+        <input type="checkbox" name="a3" id=""><img src="../../images/3.gif" alt="">
+        <p></p>
+        <input type="button" value="결재" onclick="test()">
+    </form>
+</body>
+
+</html>
