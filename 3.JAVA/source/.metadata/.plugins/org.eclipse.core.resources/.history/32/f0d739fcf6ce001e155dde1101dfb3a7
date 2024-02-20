@@ -1,0 +1,24 @@
+package j0219;
+
+public class Op6Cast2 {
+
+	public static void main(String[] args) {
+		// 
+		
+		int num1 = 20, num2 = 30;
+		
+		/*
+		 * print(), println() -> 줄바꿈
+		 * printf(출력양식,, 출력할 대상자) -> 출력할 값을 출력 양식에 맞게 출력
+		 * 
+		 * decimal 			char 			String 			float
+		 *   %d(정수)		%c(문자)	%s(문자열)		%f(소수점)
+		 * 
+		 * 
+		 * */
+		
+		System.out.printf("첫번째 숫자 = %d", num1); // 
+
+	}
+
+}

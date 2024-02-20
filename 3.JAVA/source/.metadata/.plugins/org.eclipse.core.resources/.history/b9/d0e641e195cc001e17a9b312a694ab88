@@ -1,0 +1,37 @@
+package j0216.sub.abc;
+
+public class VarTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			
+
+/*
+//		실수 자료형 : float, double 
+ * 	byte -> short,char -> int -> long -> float -> double 순.
+ * 
+ * long a = 111111111111;
+ * float b = 111111111111.5; // 4바이트.
+ * 
+ * 보통 자바에서 소수점이 있는 값은 double로 저장된다.
+ * float a = 1.2f; -- 에러발생 4바이트. 숫자 뒤에 f 를 붙여서 float 형식으로 저장되도록 정의
+ * double a = 1.2 -- .
+ * 
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+		System.out.println("실수 자료형");
+		
+		float a = 1.5f;
+		System.out.println("float a = "+a); //1.5
+		
+		double d = 1.5;
+		System.out.println("double d = "+d);//1.5
+	}
+
+}

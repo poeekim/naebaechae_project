@@ -1,0 +1,29 @@
+package j0219;
+
+public class Op5Cast {
+
+	public static void main(String[] args) {
+		
+		//형변환(Casting)
+		
+		// 자동형변환(작은 범위에서 큰 범위로 이동할 때는 자동으로 형변환 된다.)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,49 @@
+package j0219;
+
+public class Op5Cast {
+
+	public static void main(String[] args) {
+		
+		//형변환(Casting)	
+		/*
+		 * 자동형변환(작은 범위에서 큰 범위로 이동할 때는 자동으로 형변환 된다.)
+		 * 
+		 * 1. 작은 크기를 가지는 타입이 큰 크기를 가지는 타입에 저장될 때만 자동 타입 변환이 발생한다. 메모리 낭비가 발생할 수 있다.
+		 *
+		 * */
+		
+		byte s = 12; // -> 2진수로 바꾸면    00001100
+		
+		
+		byte small_bowl = 10; // 작은 그릇
+		int big_bowl = 10000; // 큰그릇
+
+		int result = big_bowl - small_bowl; // small_bowl이 int형으로 자동 형변환 되어 int 끼리 계산된다.
+		System.out.println(result); // 9990
+		
+		
+		System.out.println("--------------------------------------------");
+		
+		byte a = 32;
+
+		// 1 byte로 저장된 값을 2 byte로 변환
+		short b = a;
+
+		// 2 byte로 저장된 값을 4 byte로 변환
+		int c = b;
+
+		// 4 byte로 저장된 값을 8 byte로 변환
+		long d = c;
+
+		
+		System.out.println("--------------------------------------------");
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

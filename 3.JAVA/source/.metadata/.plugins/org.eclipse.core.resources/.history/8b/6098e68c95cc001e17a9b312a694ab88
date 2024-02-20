@@ -1,0 +1,31 @@
+package j0216.sub.abc;
+
+public class VarTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			
+
+/*
+//		실수 자료형 : float double 
+ * 	byte -> short,char -> int -> long -> float -> double 순.
+ * 
+ * long a = 111111111111;
+ * float b = 111111111111.5; // 8비트
+ * 
+ *
+ *
+ *
+ *
+ *
+ *
+ */
+		System.out.println("실수 자료형");
+		
+		float a = 0;
+		double d = 0;
+		
+	}
+
+}

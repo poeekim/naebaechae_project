@@ -1,0 +1,32 @@
+package j0219;
+
+public class Op4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// 대입연산자(삼항연산자)  : 조건식에 따라서 변수에 저장된 값을 선택하여 저장시키는 연산
+		// 조건식 ? 참일경우 :  거짓일경우
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
