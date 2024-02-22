@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="--">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/BreakTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/ForTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/ForTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/ForTest3_star.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/SwitchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/SwitchTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/WhileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/Alpha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/Alpha2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/StarTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/star_test.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.20 반복문 연습(별찍기 등)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/BreakTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/CarHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/ContinueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/StarTest4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/SumBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/TV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/TVHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/sub/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/sub/CarHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/객체" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/Rect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/RectHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/j0220/IfTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/j0220/IfTest2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/webtest/3.JAVA/Java_Study/src/main/java/j0221/sub",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -62,14 +64,31 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="j0221" />
       <recent name="practice" />
       <recent name="j0220" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.star_test">
-    <configuration name="Alpha" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.Alpha" />
+  <component name="RunManager" selected="Application.RectHandling">
+    <configuration name="CarHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0221.CarHandling" />
+      <module name="Java_Study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="j0221.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.RectHandling" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
@@ -81,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Alpha2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.Alpha2" />
+    <configuration name="StarTest4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0221.StarTest4" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.*" />
+          <option name="PATTERN" value="j0221.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BreakTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0220.BreakTest" />
+    <configuration name="TVHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0221.TVHandling" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0220.*" />
+          <option name="PATTERN" value="j0221.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,25 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StarTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.StarTest3" />
+    <configuration name="j0221.sub.CarHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0221.sub.CarHandling" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="star_test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.star_test" />
-      <module name="Java_Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="practice.*" />
+          <option name="PATTERN" value="j0221.sub.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.star_test" />
-        <item itemvalue="Application.Alpha2" />
-        <item itemvalue="Application.StarTest3" />
-        <item itemvalue="Application.Alpha" />
-        <item itemvalue="Application.BreakTest" />
+        <item itemvalue="Application.RectHandling" />
+        <item itemvalue="Application.j0221.sub.CarHandling" />
+        <item itemvalue="Application.TVHandling" />
+        <item itemvalue="Application.CarHandling" />
+        <item itemvalue="Application.StarTest4" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708390629117</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="24.02.20 반복문 연습(별찍기 등)">
+      <created>1708417501026</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708417501026</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +215,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-" />
     <MESSAGE value="--" />
-    <option name="LAST_COMMIT_MESSAGE" value="--" />
+    <MESSAGE value="24.02.20 반복문 연습(별찍기 등)" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02.20 반복문 연습(별찍기 등)" />
   </component>
 </project>
