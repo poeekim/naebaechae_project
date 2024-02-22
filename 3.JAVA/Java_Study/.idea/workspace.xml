@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.20 반복문 연습(별찍기 등)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/BreakTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/CarHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/ContinueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/StarTest4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/SumBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/TV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/TVHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/sub/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/sub/CarHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0221/객체" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/Rect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/RectHandling.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.21 메소드 getter setter 연습">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/sub/Rec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/sub/RecHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0220/sub/readme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0222/PersonHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/j0221/sub/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/j0221/sub/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +43,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/webtest/3.JAVA/Java_Study/src/main/java/j0221/sub",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/webtest/3.JAVA/Java_Study/src/main/java/j0221/sub&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
@@ -73,7 +65,7 @@
       <recent name="j0220" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RectHandling">
+  <component name="RunManager" selected="Application.PersonHandling">
     <configuration name="CarHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="j0221.CarHandling" />
       <module name="Java_Study.main" />
@@ -87,38 +79,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PersonHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0222.PersonHandling" />
+      <module name="Java_Study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="j0222.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.sub.RecHandling" />
+      <module name="Java_Study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.sub.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RectHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practice.RectHandling" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StarTest4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0221.StarTest4" />
-      <module name="Java_Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="j0221.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TVHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0221.TVHandling" />
-      <module name="Java_Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="j0221.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PersonHandling" />
+        <item itemvalue="Application.RecHandling" />
+        <item itemvalue="Application.CarHandling" />
         <item itemvalue="Application.RectHandling" />
         <item itemvalue="Application.j0221.sub.CarHandling" />
-        <item itemvalue="Application.TVHandling" />
-        <item itemvalue="Application.CarHandling" />
-        <item itemvalue="Application.StarTest4" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708417501026</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="24.02.21 메소드 getter setter 연습">
+      <created>1708561066195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708561066195</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +215,7 @@
     <MESSAGE value="-" />
     <MESSAGE value="--" />
     <MESSAGE value="24.02.20 반복문 연습(별찍기 등)" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.20 반복문 연습(별찍기 등)" />
+    <MESSAGE value="24.02.21 메소드 getter setter 연습" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02.21 메소드 getter setter 연습" />
   </component>
 </project>

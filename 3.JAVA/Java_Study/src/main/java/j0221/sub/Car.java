@@ -48,8 +48,9 @@ public class Car {
             color=col;
         }
 
-        public void setCurrent_speed(int speed){
-            current_speed= speed;
+        public void setCurrent_speed(int speed) {
+            current_speed=speed;
+
         }
 
         public void setSidong(boolean si){
@@ -92,14 +93,32 @@ public class Car {
         }
 
         // 차의 속도 증가 (jsp : function speedUp(speed){})
+        // 170km 이하까지만 속도 제한
         void speedUp(int speed){
-            current_speed+=speed;
-            System.out.println(speed+"만큼 속도 증가");
+            if (sidong==true) {
+                if(speed<0 || (current_speed+speed)>=170) {
+                    System.out.println("0 <= 속도 <170 필수");
+                    current_speed=120;
+                }else{
+                    current_speed += speed;
+                }
+            } else {
+                System.out.println("시동을 먼저 걸으시오");
+            }
         }
 
         // 차의 속도 감소
         void speedDown(int speed){
-            current_speed-=speed;
+            if(sidong==true) {
+                if(speed<0 || (current_speed-speed)<0) {
+                    System.out.println("속도는 0일 수 없음");
+                    current_speed=120;
+                }else {
+                    current_speed -= speed;
+                }
+            }else {
+                System.out.println("시동을 먼저 걸으시오");
+            }
             System.out.println(speed+"만큼 속도 감소");
         }
 
