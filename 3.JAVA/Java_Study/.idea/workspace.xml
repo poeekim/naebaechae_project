@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.22 생성자, 오버로딩, 오버라이딩">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/PersonHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/PrintTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/RectHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/ThisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/ThisTest2.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.26 생성자 this 사용법">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/MethodEx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/SumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/TwoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,26 +65,13 @@
       <recent name="j0220" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThisTest">
-    <configuration name="CarHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0221.CarHandling" />
+  <component name="RunManager" selected="Application.MethodEx">
+    <configuration name="MethodEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0226.MethodEx" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0221.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0222.PersonHandling" />
-      <module name="Java_Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="j0222.*" />
+          <option name="PATTERN" value="j0226.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecHandling" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.sub.RecHandling" />
+    <configuration name="SumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0226.SumTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.sub.*" />
+          <option name="PATTERN" value="j0226.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,13 +118,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0226.TwoTest" />
+      <module name="Java_Study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="j0226.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MethodEx" />
+        <item itemvalue="Application.TwoTest" />
+        <item itemvalue="Application.SumTest" />
         <item itemvalue="Application.ThisTest" />
         <item itemvalue="Application.PrintTest" />
-        <item itemvalue="Application.PersonHandling" />
-        <item itemvalue="Application.RecHandling" />
-        <item itemvalue="Application.CarHandling" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708583976024</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="24.02.26 생성자 this 사용법">
+      <created>1708925151675</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708925151675</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,6 +231,7 @@
     <MESSAGE value="24.02.20 반복문 연습(별찍기 등)" />
     <MESSAGE value="24.02.21 메소드 getter setter 연습" />
     <MESSAGE value="24.02.22 생성자, 오버로딩, 오버라이딩" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.22 생성자, 오버로딩, 오버라이딩" />
+    <MESSAGE value="24.02.26 생성자 this 사용법" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02.26 생성자 this 사용법" />
   </component>
 </project>
