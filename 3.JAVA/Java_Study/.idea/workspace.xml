@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.26 생성자 this 사용법">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/MethodEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/SumTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0226/TwoTest.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.26 생성자 this 사용법, 메소드 만들기, Scanner 객체">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/ArrayMaxMin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/ArrayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/ArrayTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/ArrayTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/IfTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/MethodEx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0227/MethodEx2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/ThreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/ThreeTest_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +36,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/ArrayMaxMin.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/ArrayTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/ArrayTest2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/IfTest.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/MethodEx.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/j0227/MethodEx2.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/webtest/3.JAVA/Java_Study/src/main/java/j0226",
+    "last_opened_file_path": "C:/webtest/3.JAVA/Java_Study/src/main/java/j0227",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -55,23 +69,25 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0227" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0226" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="j0227" />
+      <recent name="practice" />
       <recent name="j0226" />
       <recent name="j0221" />
-      <recent name="practice" />
       <recent name="j0220" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MethodEx">
-    <configuration name="MethodEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0226.MethodEx" />
+  <component name="RunManager" selected="Application.ArrayTest3">
+    <configuration name="ArrayTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0227.ArrayTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0226.*" />
+          <option name="PATTERN" value="j0227.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0226.PrintTest" />
+    <configuration name="ArrayTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0227.ArrayTest2" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0226.*" />
+          <option name="PATTERN" value="j0227.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0226.SumTest" />
+    <configuration name="ArrayTest3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0227.ArrayTest3" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0226.*" />
+          <option name="PATTERN" value="j0227.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThisTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0226.ThisTest" />
+    <configuration name="IfTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0227.IfTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0226.*" />
+          <option name="PATTERN" value="j0227.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0226.TwoTest" />
+    <configuration name="j0227.MethodEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0227.MethodEx" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0226.*" />
+          <option name="PATTERN" value="j0227.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MethodEx" />
-        <item itemvalue="Application.TwoTest" />
-        <item itemvalue="Application.SumTest" />
-        <item itemvalue="Application.ThisTest" />
-        <item itemvalue="Application.PrintTest" />
+        <item itemvalue="Application.ArrayTest3" />
+        <item itemvalue="Application.ArrayTest2" />
+        <item itemvalue="Application.ArrayTest" />
+        <item itemvalue="Application.IfTest" />
+        <item itemvalue="Application.j0227.MethodEx" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708925151675</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="24.02.26 생성자 this 사용법, 메소드 만들기, Scanner 객체">
+      <created>1708933870232</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708933870232</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +255,7 @@
     <MESSAGE value="24.02.21 메소드 getter setter 연습" />
     <MESSAGE value="24.02.22 생성자, 오버로딩, 오버라이딩" />
     <MESSAGE value="24.02.26 생성자 this 사용법" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.26 생성자 this 사용법" />
+    <MESSAGE value="24.02.26 생성자 this 사용법, 메소드 만들기, Scanner 객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02.26 생성자 this 사용법, 메소드 만들기, Scanner 객체" />
   </component>
 </project>
