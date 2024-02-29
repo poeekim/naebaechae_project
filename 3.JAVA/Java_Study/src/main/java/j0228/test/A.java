@@ -15,6 +15,7 @@ public class A {
 
     // default : 접근권한이 없으면 default 접근권한자로 부여 가능
     int j;
+    protected int k; // 상속도 허용하면서 데이터도 외부로 부터 보호
 
     void print2() {
         System.out.println("default j = " + j);
