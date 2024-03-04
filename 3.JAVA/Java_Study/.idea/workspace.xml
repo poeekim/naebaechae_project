@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.28 상속">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/AdvanceVolume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/CallByRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/CallByValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/CarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/FinalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/GCCollector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/Radio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/SimpleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/TV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/VolTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0229/Volume.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.29 참조, 객체만들기, final, 인터페이스">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/Drawable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/ExceptionTotal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/HelloTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/HelloTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/StringTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/sub/ShapeTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/j0228/test/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/j0228/test/A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +76,20 @@
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="j0304" />
       <recent name="j0229" />
       <recent name="j0288" />
       <recent name="j0227" />
       <recent name="practice" />
-      <recent name="j0226" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VolTest">
-    <configuration name="FinalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0229.FinalTest" />
+  <component name="RunManager" selected="Application.ExceptionTotal">
+    <configuration name="ExceptionTotal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0304.ExceptionTotal" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0229.*" />
+          <option name="PATTERN" value="j0304.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GCCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0229.GCCollector" />
+    <configuration name="HelloTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0304.HelloTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0229.*" />
+          <option name="PATTERN" value="j0304.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0229.SimpleTest" />
+    <configuration name="HelloTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0304.HelloTest2" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0229.*" />
+          <option name="PATTERN" value="j0304.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0229.Test" />
+    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0304.StringTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0229.*" />
+          <option name="PATTERN" value="j0304.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0229.VolTest" />
+    <configuration name="StringTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0304.StringTest2" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0229.*" />
+          <option name="PATTERN" value="j0304.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,19 +150,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test" />
-      <item itemvalue="Application.VolTest" />
-      <item itemvalue="Application.FinalTest" />
-      <item itemvalue="Application.GCCollector" />
-      <item itemvalue="Application.SimpleTest" />
+      <item itemvalue="Application.ExceptionTotal" />
+      <item itemvalue="Application.HelloTest" />
+      <item itemvalue="Application.HelloTest2" />
+      <item itemvalue="Application.StringTest" />
+      <item itemvalue="Application.StringTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VolTest" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.FinalTest" />
-        <item itemvalue="Application.SimpleTest" />
-        <item itemvalue="Application.GCCollector" />
+        <item itemvalue="Application.ExceptionTotal" />
+        <item itemvalue="Application.HelloTest2" />
+        <item itemvalue="Application.HelloTest" />
+        <item itemvalue="Application.StringTest2" />
+        <item itemvalue="Application.StringTest" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709106935922</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="24.02.29 참조, 객체만들기, final, 인터페이스">
+      <created>1709193381503</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709193381503</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +296,7 @@
     <MESSAGE value="24.02.27 메소드 만들기, 배열 활용" />
     <MESSAGE value="24.02.27 메소드 만들기, 배열 활용2" />
     <MESSAGE value="24.02.28 상속" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.28 상속" />
+    <MESSAGE value="24.02.29 참조, 객체만들기, final, 인터페이스" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02.29 참조, 객체만들기, final, 인터페이스" />
   </component>
 </project>
