@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.02.29 참조, 객체만들기, final, 인터페이스">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/ExceptionTotal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/HelloTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/HelloTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/ShapeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/StringTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/StringTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0304/sub/ShapeTest2.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.03.04 객체형변환, 객체배열, 예외처리 등">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/ConvertTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/DataOutputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/FileInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/FileInputTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/FilterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/ObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/SimpleIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/WriteHello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0305/sawon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,20 +76,20 @@
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="j0305" />
       <recent name="j0304" />
       <recent name="j0229" />
       <recent name="j0288" />
       <recent name="j0227" />
-      <recent name="practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExceptionTotal">
-    <configuration name="ExceptionTotal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0304.ExceptionTotal" />
+  <component name="RunManager" selected="Application.ConvertTest">
+    <configuration name="ConvertTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0305.ConvertTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0304.*" />
+          <option name="PATTERN" value="j0305.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0304.HelloTest" />
+    <configuration name="DataOutputTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0305.DataOutputTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0304.*" />
+          <option name="PATTERN" value="j0305.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0304.HelloTest2" />
+    <configuration name="FilterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0305.FilterTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0304.*" />
+          <option name="PATTERN" value="j0305.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0304.StringTest" />
+    <configuration name="ObjectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0305.ObjectTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0304.*" />
+          <option name="PATTERN" value="j0305.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,12 +136,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0304.StringTest2" />
+    <configuration name="sawon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0305.sawon" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0304.*" />
+          <option name="PATTERN" value="j0305.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,19 +150,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ExceptionTotal" />
-      <item itemvalue="Application.HelloTest" />
-      <item itemvalue="Application.HelloTest2" />
-      <item itemvalue="Application.StringTest" />
-      <item itemvalue="Application.StringTest2" />
+      <item itemvalue="Application.ConvertTest" />
+      <item itemvalue="Application.DataOutputTest" />
+      <item itemvalue="Application.FilterTest" />
+      <item itemvalue="Application.ObjectTest" />
+      <item itemvalue="Application.sawon" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExceptionTotal" />
-        <item itemvalue="Application.HelloTest2" />
-        <item itemvalue="Application.HelloTest" />
-        <item itemvalue="Application.StringTest2" />
-        <item itemvalue="Application.StringTest" />
+        <item itemvalue="Application.ConvertTest" />
+        <item itemvalue="Application.FilterTest" />
+        <item itemvalue="Application.sawon" />
+        <item itemvalue="Application.DataOutputTest" />
+        <item itemvalue="Application.ObjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709193381503</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="24.03.04 객체형변환, 객체배열, 예외처리 등">
+      <created>1709538161037</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709538161037</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +304,7 @@
     <MESSAGE value="24.02.27 메소드 만들기, 배열 활용2" />
     <MESSAGE value="24.02.28 상속" />
     <MESSAGE value="24.02.29 참조, 객체만들기, final, 인터페이스" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.02.29 참조, 객체만들기, final, 인터페이스" />
+    <MESSAGE value="24.03.04 객체형변환, 객체배열, 예외처리 등" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.03.04 객체형변환, 객체배열, 예외처리 등" />
   </component>
 </project>
