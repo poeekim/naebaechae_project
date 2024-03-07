@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.03.05 BufferedReader, Out/InputStreamReader, FileOut/inputStream, FileWriter, DataOut/InputStream, 대소문자구별">
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/ArrayListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/ArrayListTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/BoxingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/EnumTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/GenericEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/ListLotto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/ThreeTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0306/VectorTest.java" afterDir="false" />
+    <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.03.06 ArrayList, List, Generic, Enum/iterator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/Calc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/MultiThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/MultiThread2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/MyThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/ShareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/SingletonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/SyncTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/ThreadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/WildExtendTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/WildTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/ex1.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/imsi.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/j0307/sub/WildSuper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/j0226/PrintTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/j0226/PrintTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/j0227/ArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/j0227/ArrayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,40 +62,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/webtest/3.JAVA/Java_Study/src/main/java/j0288&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/webtest/3.JAVA/Java_Study/src/main/java/j0307",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0307" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0288" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0227" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0226" />
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\j0221\sub" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="j0307" />
       <recent name="j0306" />
       <recent name="practice" />
       <recent name="j0305" />
       <recent name="j0304" />
-      <recent name="j0229" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreeTest2">
-    <configuration name="ArrayListTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0306.ArrayListTest2" />
+  <component name="RunManager" selected="Application.SingletonTest">
+    <configuration name="SingletonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0307.SingletonTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0306.*" />
+          <option name="PATTERN" value="j0307.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0306.GenericEx" />
+    <configuration name="j0307.MultiThread2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0307.MultiThread2" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0306.*" />
+          <option name="PATTERN" value="j0307.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListLotto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0306.ListLotto" />
+    <configuration name="j0307.MyThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0307.MyThread" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0306.*" />
+          <option name="PATTERN" value="j0307.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0306.ThreeTest2" />
+    <configuration name="j0307.ShareTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0307.ShareTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0306.*" />
+          <option name="PATTERN" value="j0307.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="j0306.EnumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0306.EnumTest" />
+    <configuration name="j0307.SyncTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="j0307.SyncTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0306.*" />
+          <option name="PATTERN" value="j0307.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,19 +157,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.j0306.ArrayListTest2" />
-      <item itemvalue="Application.j0306.GenericEx" />
-      <item itemvalue="Application.j0306.ListLotto" />
-      <item itemvalue="Application.ThreeTest2" />
-      <item itemvalue="Application.j0306.EnumTest" />
+      <item itemvalue="Application.SingletonTest" />
+      <item itemvalue="Application.j0307.MultiThread2" />
+      <item itemvalue="Application.j0307.MyThread" />
+      <item itemvalue="Application.j0307.ShareTest" />
+      <item itemvalue="Application.j0307.SyncTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreeTest2" />
-        <item itemvalue="Application.j0306.GenericEx" />
-        <item itemvalue="Application.j0306.ListLotto" />
-        <item itemvalue="Application.j0306.EnumTest" />
-        <item itemvalue="Application.j0306.ArrayListTest2" />
+        <item itemvalue="Application.SingletonTest" />
+        <item itemvalue="Application.j0307.SyncTest" />
+        <item itemvalue="Application.j0307.ShareTest" />
+        <item itemvalue="Application.j0307.MyThread" />
+        <item itemvalue="Application.j0307.MultiThread2" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709624846159</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="24.03.06 ArrayList, List, Generic, Enum/iterator">
+      <created>1709711514497</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709711514497</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,6 +327,7 @@
     <MESSAGE value="24.02.29 참조, 객체만들기, final, 인터페이스" />
     <MESSAGE value="24.03.04 객체형변환, 객체배열, 예외처리 등" />
     <MESSAGE value="24.03.05 BufferedReader, Out/InputStreamReader, FileOut/inputStream, FileWriter, DataOut/InputStream, 대소문자구별" />
-    <option name="LAST_COMMIT_MESSAGE" value="24.03.05 BufferedReader, Out/InputStreamReader, FileOut/inputStream, FileWriter, DataOut/InputStream, 대소문자구별" />
+    <MESSAGE value="24.03.06 ArrayList, List, Generic, Enum/iterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.03.06 ArrayList, List, Generic, Enum/iterator" />
   </component>
 </project>

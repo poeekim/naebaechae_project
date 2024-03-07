@@ -3,7 +3,7 @@ package j0227;
 public class ArrayTest {
     public static void main(String[] args) {
 
-        // 자료형 배열명 [] = new 자료현[갯수]
+        // 자료형 배열명 [] = new 자료형[갯수]
         int su[]= new int[3];
         System.out.println("su : "+su);
 
