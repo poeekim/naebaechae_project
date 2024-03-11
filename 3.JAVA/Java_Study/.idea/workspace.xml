@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a5bec85-92f8-446c-af1d-453f978c5270" name="Changes" comment="24.03.07 Thread,MultiThread, RandomAccessFile, sychronized, Singleton">
-      <change afterPath="$PROJECT_DIR$/../JavaStudy2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0308/NetWorkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0308/ProTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0308/URLTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/j0308/test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/practice/21000151RGN001.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaStudy2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaStudy2/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaStudy2/src/main/java/j0308/chat/ChatGUIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaStudy2/src/main/java/j0308/chat/ChatGUIServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/CalcTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/SumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/j0307/ex1.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/j0307/imsi.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/.metadata/.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/.metadata/.log" beforeDir="false" />
@@ -425,7 +419,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/webtest/3.JAVA/Java_Study/src/main/java/j0307&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;
@@ -443,14 +437,27 @@
       <recent name="C:\webtest\3.JAVA\Java_Study\src\main\java\practice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="practice" />
       <recent name="j0307" />
       <recent name="j0306" />
-      <recent name="practice" />
       <recent name="j0305" />
       <recent name="j0304" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.URLTest">
+  <component name="RunManager" selected="Application.Time">
+    <configuration name="CalcTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.CalcTest" />
+      <module name="Java_Study.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NetWorkTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="j0308.NetWorkTest" />
       <module name="Java_Study.main" />
@@ -464,12 +471,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0308.ProTest" />
+    <configuration name="SumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.SumTest" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0308.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -477,12 +484,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingletonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0307.SingletonTest" />
+    <configuration name="Time" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.Time" />
       <module name="Java_Study.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="j0307.*" />
+          <option name="PATTERN" value="practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -503,33 +510,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="j0307.SyncTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="j0307.SyncTest" />
-      <module name="Java_Study.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="j0307.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.CalcTest" />
+      <item itemvalue="Application.SumTest" />
+      <item itemvalue="Application.Time" />
       <item itemvalue="Application.NetWorkTest" />
-      <item itemvalue="Application.ProTest" />
       <item itemvalue="Application.URLTest" />
-      <item itemvalue="Application.SingletonTest" />
-      <item itemvalue="Application.j0307.SyncTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Time" />
+        <item itemvalue="Application.SumTest" />
+        <item itemvalue="Application.CalcTest" />
         <item itemvalue="Application.URLTest" />
         <item itemvalue="Application.NetWorkTest" />
-        <item itemvalue="Application.ProTest" />
-        <item itemvalue="Application.SingletonTest" />
-        <item itemvalue="Application.j0307.SyncTest" />
       </list>
     </recent_temporary>
   </component>
