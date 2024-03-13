@@ -1,14 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" %>
+<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" %>
 <!DOCTYPE html>
 <%!
 // 선언문 : 현재 jsp 페이지 전체에서 위치에 상관없이 사용이 가능한 변수, 메소드가 필요한 경우 사용되는 구문
+
 	String name = "홍길동"; // 전역변수의 성격(Static이 있는 느낌)
 	public String getName(){ // 정적메소드? 일반메소드??
 		return name;
 	}
+	
 %>
 	name의 값은? <%=name %><p>
 	getName()을 호출?<%=getName() %>
+
+
 <html>
 <head>
 <meta charset="UTF-8">
