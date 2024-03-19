@@ -37,16 +37,6 @@ function inputCheck(){
 		document.regForm.mem_name.focus();
 		return;
 	}
-	if(document.regForm.mem_num1.value==""){
-		alert("주민번호을 입력해 주세요.");
-		document.regForm.mem_num1.focus();
-		return;
-	}
-	if(document.regForm.mem_num2.value==""){
-		alert("주민번호을 입력해 주세요.");
-		document.regForm.mem_num2.focus();
-		return;
-	}
 	if(document.regForm.mem_email.value==""){
 		alert("이메일을 입력해 주세요.");
 		document.regForm.mem_email.focus();
@@ -88,5 +78,9 @@ function idCheck(id){
 }
 //우편번호를 검색해주는 함수선언
 function zipCheck(){
-    
+	// check=y | check=n : 우편번호 검색창의 모습을 구분짓기 위한 인자(매개변수로 구분해서 전달)
+	url = "ZipCheck.jsp?check=y";
+	// menubar(메뉴바), status(상태바), scrollbars(스크롤가능)=yes | no
+	open(url, "post", "left=400,top=220,width=500,height=300," + "menubar=no, status=yes, toolbar=no, scrollbars=yes");
+	//open('idCheck.html', 'w', 'left=350,top=150,width=300,height=150');
 }

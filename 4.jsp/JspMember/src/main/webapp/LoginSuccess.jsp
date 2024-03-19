@@ -4,8 +4,6 @@
 // 로그인 유무 판단 session.setAttribute("idKey", mem_id);
     String mem_id = (String)session.getAttribute("idKey"); // 로그인 했을 때 보여지는 모든 화면에 해당 문장이 있어야함(로그인 성공 여부에 따라 보여지는 화면이 다르므로)
     System.out.println("LoginSuccess.jsp 의 mem_id = " + mem_id);
-
-
 %>
 <!DOCTYPE html>
 <html lang="en">

@@ -11,8 +11,18 @@ public class MemberDTO {
     private String mem_name; // 이름
     private String mem_email; // 이메일 
     private String mem_phone; // 전화번호
+
+    public String getMem_job() {
+        return mem_job;
+    }
+
+    public void setMem_job(String mem_job) {
+        this.mem_job = mem_job;
+    }
+
     private String mem_zipcode; // 우편번호
     private String mem_address; // 주소
+    private String mem_job; // 직업
 
 
     public String getMem_id() {
@@ -20,7 +30,7 @@ public class MemberDTO {
     }
 
     public void setMem_id(String mem_id) {
-        this.mem_id = mem_id;
+        this.mem_id = mem_id.trim();
     }
 
     public String getMem_passwd() {
@@ -28,7 +38,7 @@ public class MemberDTO {
     }
 
     public void setMem_passwd(String mem_passwd) {
-        this.mem_passwd = mem_passwd;
+        this.mem_passwd = mem_passwd.trim();
     }
 
     public String getMem_name() {

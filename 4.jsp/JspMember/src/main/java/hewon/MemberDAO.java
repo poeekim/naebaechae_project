@@ -31,7 +31,7 @@ public class MemberDAO {
 
     // 3. 요구분석에 따라서 웹상에 호출할 메소드를 작성 -> flow-chart
 
-    // ----- 1) 회원로그인 (id,passwd)
+    // ---------------------------------------- 1) 회원로그인 (id,passwd)
     // select id, passwd from member where id = 'nup' and passwd = '1234';
     public boolean loginCheck(String id, String passwd) { // LoginProc.jsp 호출
         // 1-1) DB 연결
@@ -59,7 +59,7 @@ public class MemberDAO {
         return check;
     }
 
-    // ----- 2) 중복 id체크
+    // ------------------------------------------ 2) 중복 id체크
     // select id from member where id='kkk';
     public boolean checkId(String mem_id) {
 
@@ -87,7 +87,7 @@ public class MemberDAO {
     }
 
 
-    // ----- 3) 우편번호 검색 : 직접테이블 생성, 입력, 찾기, OpenAPI 사용
+    // ----------------------------------------- 3) 우편번호 검색 : 직접테이블 생성, 입력, 찾기, OpenAPI 사용
    /*
    select * from zipcode where area3 like '미아2동%'; -- 14개
 *
@@ -133,15 +133,124 @@ public class MemberDAO {
     }
 
 
-    // ---- 4) 회원가입
+    // ----------------------------------------------------------- 4) 회원가입
+    /*
+     * insert into member values(?,?,?,?,?...)
+     * */
+    public boolean memberInsert(MemberDTO mem) { // 8개 값이 넣어야되는데, 이미 MemberDTO 클래스 내부에 8개의 매개변수를
+        // 선언했으므로 MemberDTO mem 으로 작성 가능하다.
+        boolean check = false; // 회원가입 성공 유무
+        try {
+            con = pool.getConnection();
+            // Oracle 일 경우 Transaction 처리(commit)를 필수로 해줘야함
+            con.setAutoCommit(false); // 자동 commit 안되도록 설정
+            // sql 구문
+            sql = "insert into member values(?,?,?,?,?,?,?,?)";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, mem.getMem_id());
+            pstmt.setString(2, mem.getMem_passwd());
+            pstmt.setString(3, mem.getMem_name());
+            pstmt.setString(4, mem.getMem_email());
+            pstmt.setString(5, mem.getMem_phone());
+            pstmt.setString(6, mem.getMem_zipcode());
+            pstmt.setString(7, mem.getMem_address());
+            pstmt.setString(8, mem.getMem_job());
 
-    // ---- 5) 수정할 회원을 찾기
+            int insert = pstmt.executeUpdate(); //  insert, update, delete, create, alter, drop 일 경우 executeUpdate 를 씀.
+            con.commit();
+            System.out.println("insert(데이터 입력유무) = " + insert); // 1 - 성공  | 0 - 실패
+            if (insert > 0) {
+                check = true;
+                System.out.println("데이터 입력 완료");
+            }
 
-    // ---- 6) 회원수정
+        } catch (Exception e) {
+            System.out.println("memberInsert() - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt); // rs 는 select 문에서만 사용하므로 해당 insert 구문에서는 메모리 해제할 필요가 없음.
 
-    // ---- 7) 회원탈퇴
+        } return check;
 
-    // ---- 8) 회원리스트 : 게시판의 글목록보기 (관리자)
+    }
+
+    // --------------------------------------------------------------- 5) 수정할 회원을 찾기
+    // select * from member where id='nup'
+
+    public MemberDTO getMember(String mem_id) {
+        MemberDTO mem = null;
+
+        try {
+            con= pool.getConnection();
+            sql = "select * from member where id=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, mem_id);
+            rs = pstmt.executeQuery();
+            System.out.println("sql 구문 = " + sql); // select 구문을 실행할 때 사용하는 메소드
+            // id 값에 해당하는 레코드를 찾아야함
+            if (rs.next()) {
+                // 데이터가 있음 -> Setter Method의 매개변수로 저장 : 웹에 출력 Getter Method
+                mem = new MemberDTO();
+                mem.setMem_id(rs.getString("id"));
+                mem.setMem_passwd(rs.getString("passwd"));
+                mem.setMem_name(rs.getString("name"));
+                mem.setMem_phone(rs.getString("phone"));
+                mem.setMem_zipcode(rs.getString("zipcode"));
+                mem.setMem_address(rs.getString("address"));
+                mem.setMem_email(rs.getString("email"));
+                mem.setMem_job(rs.getString("job"));
+            }
+            System.out.println();
+        } catch (Exception e) {
+            System.out.println("e = " + e);
+        } finally {
+            pool.freeConnection(con,pstmt,rs);
+        }
+        return mem; // MemberUpdate.jsp 에게 반환
+    }
+
+    // -------------------------------------------------------------------- 6) 회원수정
+    public boolean memberUpdate(MemberDTO mem) {
+        boolean check = false; // 회원수정 성공 유무
+        try {
+            con = pool.getConnection();
+            // Oracle 일 경우 Transaction 처리(commit)를 필수로 해줘야함
+            con.setAutoCommit(false); // 자동 commit 안되도록 설정
+            // sql 구문
+            sql = "update member set passwd=?, name=?, email=?, " +
+                    "phone=?, zipcode=?, address=?, job=? where id=?";
+
+            pstmt = con.prepareStatement(sql);
+
+            pstmt.setString(1, mem.getMem_passwd());
+            pstmt.setString(2, mem.getMem_name());
+            pstmt.setString(3, mem.getMem_email());
+           // System.out.println("mem.getMem_email() = " + mem.getMem_email());
+            pstmt.setString(4, mem.getMem_phone());
+            pstmt.setString(5, mem.getMem_zipcode());
+            pstmt.setString(6, mem.getMem_address());
+            pstmt.setString(7, mem.getMem_job());
+            pstmt.setString(8, mem.getMem_id());
+            int update = pstmt.executeUpdate();
+            con.commit();
+            System.out.println("update(데이터 수정유무) = " + update); // 1 - 성공  | 0 - 실패
+            if (update > 0) {
+                check = true;
+                System.out.println("데이터 수정 완료");
+            }
+
+        } catch (Exception e) {
+            System.out.println("memberUpdate() - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs); // rs 는 select 문에서만 사용하므로 해당 insert 구문에서는 메모리 해제할 필요가 없음.
+
+        } return check;
+
+    }
+    }
+
+    // -------------------------------------------------------------------- 7) 회원탈퇴
+
+    // ------------------------------------------------------------------- 8) 회원리스트 : 게시판의 글목록보기 (관리자)
 
 
-}
+
