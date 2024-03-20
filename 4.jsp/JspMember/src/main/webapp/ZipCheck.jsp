@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <jsp:useBean id="memMgr" class="hewon.MemberDAO"/>
 <%
+    System.out.println("-------------Connect ZipCheck.jsp------------ ");
     //script.jsp 에서 ZipCheck() 호출 -> ZipCheck.jsp?check=y
     request.setCharacterEncoding("utf-8");
 

@@ -67,6 +67,7 @@ public class MemberDAO {
 
         // 1-2) SQL 구문 처리
         try {
+
             con = pool.getConnection();
             sql = "select id from member where id = ?"; // 웹 상에서 입력받는 값들은 물음표로 설정해준다.
             pstmt = con.prepareStatement(sql);
@@ -244,13 +245,67 @@ public class MemberDAO {
             pool.freeConnection(con, pstmt, rs); // rs 는 select 문에서만 사용하므로 해당 insert 구문에서는 메모리 해제할 필요가 없음.
 
         } return check;
+    }
 
-    }
-    }
 
     // -------------------------------------------------------------------- 7) 회원탈퇴
+    /*
+     1. SQL 문이 두개가 필요하다
+        1) select passwd from member where id ='아이디명'
+        2) delete from member where id = '아이디명'
+     */
+
+    public int memberDelete(String id, String passwd) {
+        String dbpasswd = ""; // DB내에서 찾은 암호를 저장하기 위함. (매개변수 passwd와 비교해야하므로)
+        int x = -1; // 회원탈퇴 유무 구별
+
+        try {
+
+            con = pool.getConnection();
+            // 트랜잭션 처리
+            con.setAutoCommit(false); // 자동 commit 안되도록 설정
+            System.out.println("----------------------");
+            sql = "select passwd from member where id =?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, id);
+            rs = pstmt.executeQuery();
+            // 암호를 찾았다면
+            if (rs.next()) {
+                dbpasswd = rs.getString("passwd");
+                System.out.println("dbpasswd = " + dbpasswd);
+                // dbpasswd (DB상의 암호) 와 passwd(웹상의 암호) 일치유무 -> 삭제 진행
+                if (dbpasswd.equals(passwd)) { // 암호가 일치할시
+                    sql = "delete from member where id = ?";
+                    pstmt = con.prepareStatement(sql);
+                    pstmt.setString(1, id);
+                    int delete = pstmt.executeUpdate();
+                    System.out.println("회원탈퇴 성공 여부(delete) = " + delete); // 1 : 탈퇴 O
+                    con.commit(); // 트랜잭션 완료
+                    x = 1;
+                } else { // 암호 일치 X
+                    x = 0;
+                    System.out.println("회원 탈퇴 실패. 비밀번호를 확인하십시오");
+
+                }
+            }else { // 암호가 존재하지 않는다면 (이 부분은 생략가능. why? 애초에 회원가입시 암호를 필수입력하므로, 암호가 존재하지 않는 케이스는 발생되지 않음)
+                x = -1;
+            }
+
+        } catch (Exception e) {
+            System.out.println("e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }return x; // deletePro.jsp 에서 x값을 받아서 처리
+
+
+    }
+
 
     // ------------------------------------------------------------------- 8) 회원리스트 : 게시판의 글목록보기 (관리자)
+
+    }
+
+
 
 
 

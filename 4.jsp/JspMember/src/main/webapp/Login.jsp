@@ -1,5 +1,8 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%
+    System.out.println("-------------Connect Login.jsp------------ ");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +53,7 @@
         <tr><!--정가운데 버튼 2개 배치 input:button  나머지 td영역까지 포함해서 가운데 배치-->
             <td align="center" colspan="2">
                 <input type="button" value="로그인" onclick="loginCheck()">&nbsp
-                <input type="button" value="회원가입" onclick="document.location='register.jsp'">
+                <input type="button" value="회원가입" onclick="document.location = 'agreement.jsp'">
             </td>
             <!-- <td align="center"><input type="button" value="회원가입"></td> -->
         </tr>

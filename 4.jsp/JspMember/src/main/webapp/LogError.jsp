@@ -23,6 +23,6 @@
 <!-- span{로그인에 실패하셨습니다.}+span{아이디및 비밀번호를 다시 확인요망!} -->
 <span>로그인에 실패하셨습니다.</span><p></p>
 <span>아이디 및 비밀번호를 다시 확인요망!</span><p></p>
-<a href="Login.html">다시 로그인</a>
+<a href="Login.jsp">다시 로그인</a>
 </body>
 </html>

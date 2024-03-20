@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" import="hewon.MemberDAO" %>
 <%
+    System.out.println("-------------Connect MemberUpdateProc.jsp------------ ");
     // 404 에러 발생 시 보통은 오타로 인한 오류가 많음 -> 수정을 해도 캐시에 이전 데이터로 저장되어 있기 때문에 바로 적용되지 않음
     response.setHeader("Cache-Control", "no-cache"); // 메모리에 저장 유무 - (no-cache) : 캐시 저장 X
     response.setHeader("Pragma", "no-cache");

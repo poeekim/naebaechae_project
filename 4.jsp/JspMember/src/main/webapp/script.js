@@ -13,6 +13,8 @@ function loginCheck(){
 }
 
 function memberReg(){
+	//document.location = 'agreement.jsp';
+	// 안먹혀서 Login.jsp 에서 다이렉트 연결로 수정함. ( Login.jsp -56 row)
 	
 }
 

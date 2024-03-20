@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%
+    System.out.println("-------------Connect Logout.jsp------------ ");
     session.invalidate(); // 로그아웃(메모리에 저장된 계정정보 삭제하기)
 %>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout.html(로그아웃)</title>
+    <title>Logout.jsp(로그아웃)</title>
 </head>
 <body>
 <script>

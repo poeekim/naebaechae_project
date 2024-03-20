@@ -1,11 +1,14 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%
+    System.out.println("-------------Connect register.jsp------------ ");
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.register.html(회원가입창)</title>
+    <title>2.register.jsp(회원가입창)</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="script.js?ver=1"></script>
     <style>
