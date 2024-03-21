@@ -113,6 +113,79 @@ public class BoardDAO {
         return articleList; // 최대 10개가 들어가니, list.jsp 내에서 for 문을 이용해 필드별로 출력할 예정.
     }
 
+    // 게시판의 글쓰기 및 답변달기
+    // insert into board values(?,?,?...) => BoardDTO article
+    public void insertArticle(BoardDTO article) {
+        // 1. article 이 신규글인지, 답변글인지 구분하기
+        int num = article.getNum(); // 신규글이다 -> 0 (답변글인지, 새글인지 구분하기 위한 번호)
+        int ref = article.getRef();
+        int re_step = article.getRe_step();
+        int re_level = article.getRe_level();
+
+        int number = 0; // 게시물 번호 ( 데이터를 저장하기 위한 게시물 번호)
+
+        System.out.println("num = " + num);
+        System.out.println("ref = " + ref);
+        System.out.println("re_step = " + re_step);
+        System.out.println("re_level = " + re_level);
+
+        try {
+            con= pool.getConnection();
+            sql = "select max(num) from board";
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                number = rs.getInt(1) + 1; // max(num) 은 그룹함수라서 column 이름을 적을 수 없으니, column index 값을 이용한다.
+            } else {
+                number=1; // 데이터가 없으면 1번부터 시작 할 수 있도록 number 값에 1 할당.
+            }
+            if (num != 0) { // 양수이면서 1이상이면 답변글임.
+
+
+            } else { // 게시물임.
+                ref = number;
+                re_level = 0;
+                re_step = 0;
+            }
+            // 12개 필드 : num, reg_date, readcount(생략) -> 0
+            // 작성날짜 : oracle - sysdate  |  mysql - now()
+            sql = "insert into board(writer, email, subject, passwd,";
+            sql+= " reg_date, ref, re_step, re_level, content, ip)";
+            // sql += "values(?,?,?,?,?,now(),?,?,?,?)"; 와 동일
+            sql += "values(?,?,?,?,?,?,?,?,?,?)";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, article.getWriter());
+            pstmt.setString(2, article.getEmail());
+            pstmt.setString(3, article.getSubject());
+            pstmt.setString(4, article.getPasswd());
+            pstmt.setTimestamp(5, article.getReg_date());
+
+/*           article 은 입력 받은 값을 가져올 때 사용하는 것임
+             ref,re_Step, re_level 은 기존의 데이터가 아님.
+             답변글일 경우의 ref,re_Step, re_level 값과
+             신규글일 경우의 ref,re_Step, re_level 값이 다름. 
+             계산을 따로 해서 넣어줘야하므로
+             아래와 같이 article.get#$%$() 를 사용하지 않음.
+             */
+            pstmt.setInt(6,ref);
+            pstmt.setInt(7,re_step);
+            pstmt.setInt(8,re_level);
+
+            pstmt.setString(9, article.getContent());
+            pstmt.setString(10, article.getIp());
+            int insert = pstmt.executeUpdate();
+
+            System.out.println("insertArticle - insert = " + insert);
+            System.out.println(sql);
+        } catch (Exception e) {
+            System.out.println("insertArticle - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }
+
+    }
+
 
 
 

@@ -22,7 +22,6 @@
  * TO THE SOFTWARE.
  *
  */
-package kha.board;
 
 import java.sql.*;
 import java.util.Properties;
@@ -39,19 +38,16 @@ public class DBConnectionMgr {
     //커넥션풀을 벡터로 구성
     //private MemberDBMgr mem =null;
     private Vector connections = new Vector(10);
+    /*   MySQL
+	private String _driver = "org.gjt.mm.mysql.Driver",
+    _url = "jdbc:mysql://127.0.0.1:3306/mydb?useUnicode=true&characterEncoding=EUC_KR",
+    _user = "root",
+    _password = "1234"; */
 
-
-    //MySQL
-	private String _driver = "com.mysql.jdbc.Driver",
-       _url="jdbc:mysql://localhost/mydb?characterEncoding=UTF-8&serverTimezone=UTC",
-        _user = "root",
-        _password = "1234";
-
-    // Oracle
-/*    private String _driver = "oracle.jdbc.driver.OracleDriver",
+    private String _driver = "oracle.jdbc.driver.OracleDriver",
             _url = "jdbc:oracle:thin:@localhost:1521:orcl",
             _user = "scott",
-            _password = "tiger";*/
+            _password = "tiger";
 
     private boolean _traceOn = false;
     private boolean initialized = false;
