@@ -58,6 +58,8 @@
                     <input type="checkbox" name="b_1" value="v_1"> 버튼1
                 </label>
                 <label>
+                    <a href=http://localhost:8080">글목록</a>
+                    <%--//<a href="http://localhost:8080"--%>
                     <input type="checkbox" name="b_2" value="v_2"> 버튼2
                 </label>
                 <label>

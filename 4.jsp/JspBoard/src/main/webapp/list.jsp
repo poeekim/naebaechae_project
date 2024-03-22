@@ -123,7 +123,9 @@
                 } else { %> <%-- 게시판에서는 페이지 이동할 때마다 num 이라는 게시물번호와 pageNum 이라는 페이지번호가 항상 같이 가져간다(페이징 처리를 위함) --%>
                 <img src="images/level.gif" width="<%=wid%>" >
                 <% } %>
-            <a href="content.jsp?num=<%=article.getNum()%>&pageNum=<%=currentPage%>"><%=article.getSubject()%></a>
+            <a href="content.jsp?num=<%=article.getNum()%>&pageNum=<%=currentPage%>">
+                <%=article.getSubject()%>
+            </a>
                 <%
                     if (article.getReadcount() >= 20) { %>
             <img src="images/hot.gif" ><!-- 조회수가 50이상이면 hot.gif를 출력하게 설정-->

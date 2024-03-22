@@ -5,6 +5,7 @@ import java.util.*;
 // DBConnectionMgr(DB접속)
 // BoardDTO : 매개변수, 반환형으로 사용 또는 데이터를 담는 역할을 한다.
 // BoardDAO : DBConnectionMgr 을 이용하여, 실제 DB에 데이터를 select, insert, update등 할 수 있도록 하는 역할을 한다.
+
 public class BoardDAO {
     // 10개의 연결 객체(커넥션 pool 객체)
 
@@ -33,7 +34,7 @@ public class BoardDAO {
 
     // --------------- 3. 웹 페이지 상에서 호출할 메소드를 요구분석에 따라서 작성
 
-    // 1) 페이징 처리를 위한 전체 레코드수가 반드시 필요.
+    // 1) 페이징 처리를 위한 전체 레코드 수가 반드시 필요.
     public int getArticleCount() {
         int x = 0; // 총레코드 수를 저장할 변수
 
@@ -81,9 +82,11 @@ public class BoardDAO {
             if (rs.next()) { // 보여줄 레코드가 있을 시
                 articleList = new ArrayList(end); // ~ArrayList(10) : end 갯수만큼 데이터 공간 생성하라
                 do {
-                    BoardDTO article = new BoardDTO();
+                    BoardDTO article = makeArticleFromResult();
 
-                    article.setNum(rs.getInt("num")); // 게시물 번호 
+/*                    BoardDTO article = new BoardDTO();
+
+                    article.setNum(rs.getInt("num")); // 게시물 번호
                     article.setWriter(rs.getString("writer")); // 작성자 
                     article.setEmail(rs.getString("email")); // 이메일 
                     article.setSubject(rs.getString("subject")); // 글제목
@@ -96,14 +99,13 @@ public class BoardDAO {
                     article.setRe_level(rs.getInt("re_level")); // 답변글의 답변에 대한 깊이 (들여쓰기)
 
                     article.setContent(rs.getString("content")); // content
-                    article.setIp(rs.getString("ip")); // ip
+                    article.setIp(rs.getString("ip")); // ip*/
 
                     articleList.add(article); // 필수!!!!
 
                 } while (rs.next());
 
             }
-
             System.out.println("");
         } catch (Exception e) {
             System.out.println("getArticles() - e = " + e);
@@ -113,9 +115,10 @@ public class BoardDAO {
         return articleList; // 최대 10개가 들어가니, list.jsp 내에서 for 문을 이용해 필드별로 출력할 예정.
     }
 
-    // 게시판의 글쓰기 및 답변달기
+    // ------------ 게시판의 글쓰기 및 답변달기
     // insert into board values(?,?,?...) => BoardDTO article
     public void insertArticle(BoardDTO article) {
+
         // 1. article 이 신규글인지, 답변글인지 구분하기
         int num = article.getNum(); // 신규글이다 -> 0 (답변글인지, 새글인지 구분하기 위한 번호)
         int ref = article.getRef();
@@ -141,6 +144,17 @@ public class BoardDAO {
                 number=1; // 데이터가 없으면 1번부터 시작 할 수 있도록 number 값에 1 할당.
             }
             if (num != 0) { // 양수이면서 1이상이면 답변글임.
+                /*
+                * 그룹번호는 같으면서 나보다 re_step 값이 큰 값을 찾아 , 해당 값의 re_Step값을 +1 해주어야 함(ex. 2 -> 3,   4 -> 5,  6 -> 7)
+                * */
+                sql = "update board set re_step=re_step+1 where ref=? and re_step>?";
+                pstmt = con.prepareStatement(sql);
+                pstmt.setInt(1, ref);
+                pstmt.setInt(2, re_step);
+                int update = pstmt.executeUpdate();
+                System.out.println("insertArticle() success of modified comment  - update = " + update); // 1: 성공  0 : 실패
+                re_step = re_step + 1;
+                re_level = re_level + 1;
 
 
             } else { // 게시물임.
@@ -183,22 +197,196 @@ public class BoardDAO {
         } finally {
             pool.freeConnection(con, pstmt, rs);
         }
+    }
+
+    // ------------- 글 상세보기 : 하나의 레코드 찾기 content.jsp?num=3
+    // select * from board where num=?
+    // update board set readcount=readcount+1 where num=3
+
+    public BoardDTO getArticle(int num) {
+        BoardDTO article = null; // 담을 객체 선언
+        // ArrayList<BoardDTO> articleList = null; 한개이상 담을 때
+
+        try {
+            con = pool.getConnection();
+            // 1. 조회수 증가부터 시키기
+            sql = "update board set readcount=readcount+1 where num=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, num);
+            int update = pstmt.executeUpdate();
+            System.out.println("getArticle() - update = " + update);
+
+            // 2. 조회수가 증가된 레코드를 찾아 출력하기
+            sql = "select * from board where num=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, num);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                //article = new BoardDTO();
+                article = makeArticleFromResult();
+/*                article.setNum(rs.getInt("num")); // 게시물 번호
+                article.setWriter(rs.getString("writer")); // 작성자
+                article.setEmail(rs.getString("email")); // 이메일
+                article.setSubject(rs.getString("subject")); // 글제목
+                article.setPasswd(rs.getString("passwd")); // 작성자
+
+                article.setReg_date(rs.getTimestamp("reg_date")); // 게시날짜
+                article.setReadcount(rs.getInt("readcount")); // 조회수
+                article.setRef(rs.getInt("ref")); // 글 그룹번호
+                article.setRe_step(rs.getInt("re_step")); // 답변글의 순서
+                article.setRe_level(rs.getInt("re_level")); // 답변글의 답변에 대한 깊이 (들여쓰기)
+
+                article.setContent(rs.getString("content")); // content
+                article.setIp(rs.getString("ip")); // ip*/
+            }
+            System.out.println("getArticle() - update = " + update);
+
+            System.out.println();
+        } catch (Exception e) {
+            System.out.println("getArticle() - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }
+        return article; // content.jsp 에게 전달
 
     }
 
+    // ---------- 반복되는 코드를 메소드로 따로 뽑아내자 (중복된 레코드 한개를 담을 수 있는 메소드 따로 처리) --------------
+    // private 인 이유 : 외부에 공개 하면 안되니까.
+    private BoardDTO makeArticleFromResult() throws Exception {
+        BoardDTO article = new BoardDTO();
+        
+        article.setNum(rs.getInt("num")); // 게시물 번호
+        article.setWriter(rs.getString("writer")); // 작성자
+        article.setEmail(rs.getString("email")); // 이메일
+        article.setSubject(rs.getString("subject")); // 글제목
+        article.setPasswd(rs.getString("passwd")); // 작성자
 
+        article.setReg_date(rs.getTimestamp("reg_date")); // 게시날짜
+        article.setReadcount(rs.getInt("readcount")); // 조회수
+        article.setRef(rs.getInt("ref")); // 글 그룹번호
+        article.setRe_step(rs.getInt("re_step")); // 답변글의 순서
+        article.setRe_level(rs.getInt("re_level")); // 답변글의 답변에 대한 깊이 (들여쓰기)
 
+        article.setContent(rs.getString("content")); // content
+        article.setIp(rs.getString("ip")); // ip
 
+        return article;
+        
+    }
 
+    // --------------  글 수정하기 (글 상세보기와 비슷 (조회수 증가 제외))
+    // select * from board where num =?
+    public BoardDTO updateGetArticle(int num) {
+        BoardDTO article = null; // 담을 객체 선언
 
+        try {
+            con = pool.getConnection();
+            // 1. 조회수가 증가된 레코드를 찾아 출력하기
+            sql = "select * from board where num=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, num);
+            rs = pstmt.executeQuery();
 
+            if (rs.next()) {
+                //article = new BoardDTO();
+                article = makeArticleFromResult();
+            }
+            System.out.println("----------------------");
+        } catch (Exception e) {
+            System.out.println("updateGetArticle() - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }
+        return article; // content.jsp 에게 전달
+    }
 
+    // ------------------  실질적인 수정하는 메소드 : 본인인증 확인 절차 필요(글 등록시 작성한 비밀번호 일치 여부 확인 필요)
+    // update board set writer=?,subject=?,email... where num=?
+    public int updateArticle(BoardDTO article) throws Exception{
+        String dbpasswd = ""; // db 에서 저장되어 있는 게시글 암호를 가져오기 위함.
+        int x=-1; // 게시물의 수정 우뮤
 
+        try {
+            con= pool.getConnection();
+            sql = "select passwd from board where num=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, article.getNum());
 
+            rs = pstmt.executeQuery();
+            if (rs.next()) { // 찾는 암호가 존재한다면
+                dbpasswd = rs.getString("passwd");
+                System.out.println("dbpasswd = " + dbpasswd);
 
+                if (dbpasswd.equals(article.getPasswd())) {
+                    sql = "update board set writer=?,subject=?,email=?,";
+                    sql += " content=?,passwd=?  where num=?";
 
+                    pstmt = con.prepareStatement(sql);
+                    pstmt.setString(1, article.getWriter());
+                    pstmt.setString(2, article.getSubject());
+                    pstmt.setString(3, article.getEmail());
+                    pstmt.setString(4, article.getContent());
+                    pstmt.setString(5, article.getPasswd());
+                    pstmt.setInt(6, article.getNum());
 
+                    int update = pstmt.executeUpdate();
 
+                    System.out.println("updateArticle - update = " + update);
+                   // System.out.println(sql); ?
+                    x = 1;
+                } else { // 암호가 틀린 경우
+                    x = 0;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("updateArticle - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }
+        return x ; // updatePro.jsp 에서 updateArticle 메소드 호출 시 전달 받음.
+    }
+
+    // ------------- 게시판 글 삭제 메소드
+    // 삭제 전 비밀번호가 맞는지 확인 후에 삭제. select passwd from board where num=?
+    // delete from board where num=?
+    public int deleteArticle(int num, String passwd) {
+        String dbpasswd = ""; // db 에서 저장되어 있는 게시글 암호를 가져오기 위함.
+        int x=-1; // 게시물의 삭제 우뮤
+
+        try {
+            con= pool.getConnection();
+            sql = "select passwd from board where num=?";
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, num);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) { // 찾는 암호가 존재한다면
+                dbpasswd = rs.getString("passwd");
+                System.out.println("dbpasswd = " + dbpasswd);
+
+                if (dbpasswd.equals(passwd)){
+                    sql = "delete from board where num=?";
+
+                    pstmt = con.prepareStatement(sql);
+                    pstmt.setInt(1, num);
+
+                    int delete = pstmt.executeUpdate();
+
+                    System.out.println("deleteArticle - delete = " + delete);
+                    x = 1;
+                } else { // 암호가 틀린 경우
+                    x = 0;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("deleteArticle - e = " + e);
+        } finally {
+            pool.freeConnection(con, pstmt, rs);
+        }
+        return x ; // deletePro.jsp 에서 deleteArticle 메소드 호출 시 전달 받음.
+    }
 
 
 }

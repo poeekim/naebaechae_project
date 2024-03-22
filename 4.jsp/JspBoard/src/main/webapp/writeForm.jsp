@@ -72,7 +72,7 @@
     <table>
         <tr>
             <td style="background-color:#b0e0e6;text-align:right" colspan="2">
-                <a href="list.jsp">글목록</a>
+                <a href="http://192.168.0.109:8090/JspBoard/list.jsp">글목록</a>
             </td>
             <!-- <td></td> -->
         </tr>
