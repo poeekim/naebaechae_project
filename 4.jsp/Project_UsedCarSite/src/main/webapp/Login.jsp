@@ -28,6 +28,28 @@
     </style>
 </head>
 <body>
+
+<button id="test_click" onclick="">Click Me</button>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+<script>
+    function hello() {
+        console.log('hello')
+        console.log('bye')
+    }
+    $('#click').click(hello);
+
+
+    test_click.onclick = function () { // 클릭여부 확인 로직
+        if(this.dataset.once) return;
+        this.dataset.once=true;
+        console.log(this.dataset.once);
+        alert("내가 누름.");
+
+    };
+</script>
 <!--
  디자인=>table+input box(form)
     table>tr*4>td*2
@@ -58,7 +80,7 @@
                     <input type="checkbox" name="b_1" value="v_1"> 버튼1
                 </label>
                 <label>
-                    <a href=http://localhost:8080">글목록</a>
+                    <a href="http://localhost:8080">글목록</a>
                     <%--//<a href="http://localhost:8080"--%>
                     <input type="checkbox" name="b_2" value="v_2"> 버튼2
                 </label>
