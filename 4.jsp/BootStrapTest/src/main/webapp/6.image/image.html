@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>image.html</title>
+    <!-- 부트스트랩 -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+      background-color: yellowgreen;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h2>부트스트랩 이미지 설정하기</h2>
+  <!--
+    이미지도 그리드 시스템과 혼용해서 사용한다.
+    1. img-rounded : 둥근 모서리
+    2. img-circle : 원형 이미지
+    3. img-thumbnail : 썸네일
+    4. img-responsive(반응형) : 브라우저의 크기를 줄이면 기본 이미지를 제외한 크기가 줄어듬
+      -->
+    <div class="container">
+      <h3>이미지 설정</h3>
+        <div class="con-sm-6">
+          <h5>기본 이미지</h5>
+          <img src="../img/photo1.jpg" width="250" height="250">
+        </div>
+      <!-- 1. 둥근 모서리 -->
+      <div class="con-sm-6">
+        <h5>둥근 모서리</h5>
+        <img src="../img/photo1.jpg" width="250" height="250" class="img-rounded">
+      </div>
+
+      <!-- 2. 원형 이미지 -->
+      <div class="con-sm-6">
+        <h5>원형 이미지 </h5>
+        <img src="../img/photo1.jpg" width="250" height="250" class="img-circle">
+      </div>
+
+      <!-- 3. 썸네일, 4. 반응형 -->
+      <div class="con-sm-6">
+        <h5>썸네일,  반응형</h5>
+        <img src="../img/photo1.jpg" width="250" height="250" class="img-thumbnail">
+        <img src="../img/photo1.jpg" width="500" height="500" class="img-responsive">
+      </div>
+    </div>
+
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>드롭 다운 예제2</title>
+  <!--
+    1. 드롭 다운에 별도 헤더를 추가 (대표키워드) : 하위메뉴의 대표 설정
+        li 태그 class="dropdown-header"
+    2. 특정 메뉴 비활성화
+        li 태그 class="disabled"
+    3. 드롭다운 기능 : data-toggle ="dropdown"
+    4. 분리선 : 메뉴항목에 class="divider"
+
+  -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dropdown">
+<!--    <a href="#" data-toggle = "dropdown">이곳을 클릭하시오</a>-->
+
+      <input type="button" value="여기를 클릭하시오" class="btn btn-primary btn-default" data-toggle = "dropdown">
+
+        <ul role="menu" class="dropdown-menu">
+            <li role="presentation" class="dropdown-header">회원</li>
+          <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1" >회원로그인</a>
+          </li>
+          <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1" >자유게시판</a>
+          </li>
+            <!-- ex. 로그인 된 회원만 설문조사가 가능하다면 -->
+          <li role="presentation" class="disabled">
+            <a href="#" role="menuitem" tabindex="-1" >설문조사</a>
+          </li>
+            <!-- 분리선 -->
+            <li role="presentation" class="divider"></li>
+            <li role="presentation">
+                <a href="#" role="menuitem" tabindex="-1" >관리자 로그인</a>
+            </li>
+        </ul>
+
+  </div>
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

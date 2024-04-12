@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1. ajax의 내부처리 과정소개</title>
+    <script>
+        function loadJsp() {
+            // javascript를 이용한 ajax 프로그래밍
+
+            // 1. XHR 객체 얻어오기
+            const xhttp = new XMLHttpRequest();
+            alert(xhttp);
+
+            // 2. 서버한테 요청하기( open(요청방식, 요청문서, 비동기방식유무))
+            // 비동기방식 요청 (채팅이 대표적) -> 서버에게 요청하는 동안 클라이언트는 다른일을 하는 경우
+            xhttp.open("GET", "test01.jsp", true);
+
+            // 3. 서버로 요청하기 send
+            xhttp.send();
+
+            // 4. 서버가 클라이언트에게 응답( readyState(1,2,3) == 서버가 내 요청을 다 받지 못했을 경우 | readyState(4) == 요청을 다 받아들인 경우)
+            // status 속성 == 서버가 클라이언트에게 응답을 하는 경우( 성공 : 200)
+            // ajax 객체가 클라이언트에게 자동으로 호출하는 콜백함수
+            xhttp.onreadystatechange=function (){ // ~~.onreadystatechange = 콜백함수도 가능
+                if (this.readyState == 4 && this.status == 200) {
+                    alert(this.responseText); // responseTest속성 : 서버로부터 받은 문자열 결과.
+                    document.getElementById("demo").innerHTML = this.responseText;
+
+                }
+
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<!--
+1. client 와 server 사이에 서버 대신 요청해주는 XHR객체가 존재한다.
+2. 페이지가 이동되지 않은 상태에서 특정위치에 결고가 출력됨. (요청-응답페이지가 공존)
+3.
+-->
+    <h2>The XMLHttpRequest 객체</h2>
+    <button type="button" onclick="loadJsp()">request data</button>
+    <div id="demo"></div>
+</body>
+</html>

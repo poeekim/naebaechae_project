@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>부트스트랩 form</title>
+  <!-- 부트스트랩 -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <h2>bootstrap 예제</h2>
+  <div class="container">
+    <h3 class="text-info text-center">기본 폼 양식</h3>
+    <form action="">
+      <label for="Name">이름</label>
+      <input type="text" placeholder="이름" name="Name">
+      <label for="emailaddress">이메일</label>
+      <input type="email" placeholder="이메일" name="emailaddress">
+      <button type="submit">확인</button>
+
+    </form>
+    <hr>
+    <hr>
+    <br>
+    <!--
+    1. 입력받는 양식을 <div> 태그로 묶어준 뒤 class="form-group" 을 부여.
+
+    .form-group{
+    margin-bottom : 15px;  입력양식사이의 거리를 15px로 유지한다.
+    }
+
+    2. 입력받는 양식에 class="form-control" 을 부여
+    .form-control {
+			  display: block;  //줄바꿈
+			  width: 100%;
+			  height: 34px;
+			  padding: 6px 12px; //상단의 거리 6px 하단의 거리는 12px
+			  font-size: 14px;  //글자는 14px
+			  line-height: 1.42857143;
+			  color: #555;
+			  background-color: #fff;
+			  background-image: none;
+			  border: 1px solid #ccc; //기본적으로 테두리 설정
+			  border-radius: 4px;//모서리는 둥글게 설정
+			  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+			       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+   .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+    -->
+    <h3 class="text-primary text-center">부트스트랩 폼 양식</h3>
+    <form action="" role="form"> <!-- role : 폼 역할에 대해 정의 (입력한 값을 전송하는 역할이다. 굳이 쓰지는 않는다.)-->
+      <div class="form-group">
+        <label for="Name">이름</label>
+        <input type="text" placeholder="이름" name="Name">
+      </div>
+
+      <div class="form-control">
+        <label for="emailaddress">이메일</label>
+        <input type="email" placeholder="이메일" name="emailaddress">
+        <button type="submit">확인</button>
+      </div>
+    </form>
+    <hr>
+    <hr>
+    <br>
+
+    <h3 class="text-info text-center">기본 폼 양식</h3>
+    <form action="">
+      <div class="form-group">
+        <label for="Name">이름</label>
+        <input type="text" placeholder="이름" name="Name">
+      </div>
+
+      <div class="form-control">
+        <label for="emailaddress">이메일</label>
+        <input type="email" placeholder="이메일" name="emailaddress">
+        <button type="submit">확인</button>
+      </div>
+    </form>
+    <hr>
+    <hr>
+    <br>
+
+    <!--
+    3. 인라인폼 : 브라우저의 폭에 따라서 배치방법이 변경되는 폼(class="form-inline")
+      1) 폭이 넓으면 가로로 정렬
+      2) 폭이 줄어드련 세로로 정렬
+      .sr-only 클래스 선택자 (레이블을 화면에 안보이게 설정할 때)  : label 태그가 경우에 따라서는 필요없는 경우에 감추는 기능을 제공한다.
+                                                              text-right(오른쪽으로 배치)  |  pull-right(인용구 문장 배치시 사용)
+    -->
+
+    <h3 class="text-primary pull-right">인라인 폼 양식</h3>
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="Name">이름</label>
+        <input type="text" placeholder="이름" name="Name">
+      </div>
+
+      <div class="form-control">
+        <label for="emailaddress">이메일</label>
+        <input type="email" placeholder="이메일" name="emailaddress">
+        <button type="submit">확인</button>
+      </div>
+    </form>
+    <hr>
+    <hr>
+    <br>
+    <!--
+    4. 폼양식을 수평으로 정렬 -> labe, input 에 적용(그리드 시스템과 혼용)
+                class="form-horizontal"
+       모바일(col-xs-n(1~12) , pc(col-xd-n | col-lg-n)
+       입력양식은 <div> 태그로 묶어준다.
+       control-label => color:#3c763d;
+
+    -->
+
+    <h3 class="text-primary text-center">수평폼</h3>
+    <form class="form-horizontal" role="form"> <!-- 수평정렬 -->
+      <div class="form-group">
+        <label for="Name" class="col-xs-2 col-lg-2 control-label">이름</label>
+        <div class="col-xs-10">
+        <input type="text" placeholder="이름" name="Name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="emailaddress" class="col-xs-2 col-lg-2 ">이메일</label>
+        <div class="col-xs-10 col-lg-10">
+        <input type="email" placeholder="이메일" name="emailaddress">
+        </div>
+      </div>
+        <div class="form-group">
+          <div class="col-xs-offset-2 col-xs-10 col-lg-offset-2 col-lg-10">
+          <button type="submit">확인</button>
+          <button type="button">취소</button>
+          </div>
+        </div>
+    </form>
+    <hr>
+    <hr>
+    <br>
+
+
+
+
+
+  </div>
+
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

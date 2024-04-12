@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>기타 입력폼(select, check, radio~)</title>
+  <!-- 부트스트랩 -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <form class="container">
+    <h1>기타 입력폼 (select,check) </h1>
+    <!--
+    textarea 태그 : rows 속성만 사용(기본적으로 넓이는 100%)하기 때문에,
+                    cols가 필요 X
+    -->
+    <textarea class="form-control" rows="5"></textarea>
+    <!--
+    checkbox->div태그로 묶어준다.-><label>로 감싸준다.
+         input[type="radio"],
+        input[type="checkbox"] {
+       margin: 4px 0 0;
+       margin-top: 1px \9;
+       line-height: normal;
+}
+    -->
+    <h3 class="text-success">input type = "checkbox" </h3>
+    <!--
+    checkbox 태그 전체를 div 태그로 묶어주며(내부는 label 로 묶어준다.)
+    -->
+    <form role="form" class="form-inline">
+      <div class="checkbox">
+        <label>
+        <input type="checkbox"> 여기는 체크박스
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 체크박스는 다중선택
+        </label>
+      </div>
+      <!-- radio button -->
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionRadios" id="optionRadios" value="options1" checked> 여기는 라디오
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="optionRadios" id="optionRadios2" value="options2"> 라디오는 하나만 선택
+        </label>
+      </div>
+        <hr>
+      <br>
+        <h5 class="text-info text-center">radio-inline(수평정렬) 선택자를 이용</h5>
+        <!-- label 로 묶어주고 클래스 선택자 부여(수평정렬)(가로)
+              checkbox-inline, radio-inline -->
+        <h4>결제수단을 선택하시오</h4>
+          <label class="radio-inline">
+            <input type="radio" name="optionRadios" id="optionRadios3" value="options1" checked> 신용카드
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optionRadios" id="optionRadios4" value="options2"> 네이버페이
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optionRadios" id="optionRadios5" value="options3"> 무통장입금
+          </label>
+      <hr>
+      <br>
+        <h5 class="text-info text-center">checkbox-inline(수평정렬) 선택자를 이용</h5>
+        <!-- label 로 묶어주고 클래스 선택자 부여(수평정렬)(가로)
+              checkbox-inline, radio-inline -->
+        <h4>체크박스 수평정렬 class="checkbox-inline"</h4>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="checked1" disabled> 체크박스1
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="checked1"> 체크박스2
+          </label>
+      <br>
+      <!--
+
+      -->
+      <h5>콤보박스</h5>
+      <select name="" class="form-control">
+        <option value="v1">사원</option>
+        <option value="v2">대리</option>
+        <option value="v3">과장</option>
+        <option value="v4">부장</option>
+      </select>
+      <select multiple class="form-control"> <!-- multiple 사용 : 다중선택(리스트 박스이용시)-->
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+
+      </select>
+
+    </form>
+    <hr>
+    <hr>
+</form>
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

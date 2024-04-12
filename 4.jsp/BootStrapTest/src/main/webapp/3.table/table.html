@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table.html</title>
+
+    <link rel="stylesheet" href="">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <h3>테이블의 부트스트랩 적용 예제</h3>
+  <div class="container">
+    <!-- 1. 기본 모양 ( <table border="1"> ) -->
+    <table border="1">
+      <!-- table title 제목에 적합하게 적용된 태그(<thead></thead>) -->
+      <thead>
+        <tr>
+          <td>번호</td>
+          <td>글제목</td>
+          <td>작성자</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 2. class 이용 ( <table class="table table-striped" > )-->
+    <!-- 테이블의 좌우폭이 자동으로 조절되고, 테이블의 내부(가로선)만 있는 상태 -->
+    <!-- table-striped : 홀수인 row 의 배경색 변경 -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 3. table-bordered(기본 테이블은 각행에 밑줄을 테이블 전체에 테두리를 설정한다 )-->
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>4.buttongroup(nesting,sorting).html</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <h2>버튼 그룹의 중첩을 설정하는 방법</h2>
+
+  <div class="container">
+    <!--
+    1. 버튼 그룹에 속한 버튼 중 클릭해서 펼쳐질 버튼을 선택
+    2. 펼쳐질 메뉴와 버튼을 다시 내부의 중첩그룹으로 묶어준다(중첩)
+    3. caret(캐럿) : 메뉴를 펼치라고 보여지는 아래 화살표 ▼
+      1) 메뉴이름 <span class="caret"></span>
+      2) 캐럿의 메뉴부분을 둥근 모서리로 설정 : 버튼의 클래스 선택자 = "dropdown-toggle"
+    -->
+    <h4 class="text-success">버튼 그룹의 중첩을 이용한 서브메뉴</h4>
+    <div class="btn-group">
+      <button class="btn btn-default">버튼1</button>
+      <button class="btn btn-primary">버튼2</button>
+      <div class="btn-group">
+        <button class="btn btn-success dropdown-toggle" data-toggle = "dropdown">클릭<span class="caret"></span> </button>
+        <!---->
+        <ul class="dropdown-menu">
+          <li><a href="#" tabindex="-1" >공지사항</a></li>
+          <li><a href="#" tabindex="-1" >자유게시판</a></li>
+          <li><a href="#" tabindex="-1" >자료실</a></li>
+        </ul>
+        <!---->
+      </div>
+    </div>
+    <hr>
+    <p></p>
+    <!--
+    정렬
+    1. 버튼을 수직으로 정렬 : btn-group-vertical
+      버튼그룹을 만들 때, 주로 사용하는 태그 : <button> , <a>
+      버튼그룹은 수직, 수평 정렬을 할 때 태그 제한은 없지만, 양쪽 정렬 경우에는 <a> 태그만 사용한다.
+
+    -->
+    <h4 class="text-success">버튼 그룹의 수직 정렬하기</h4>
+    <div class="btn-group-vertical">
+      <button class="btn btn-default">버튼1</button>
+      <button class="btn btn-primary">버튼2</button>
+      <div class="btn-group">
+        <button class="btn btn-success dropdown-toggle" data-toggle = "dropdown">클릭<span class="caret"></span> </button>
+        <!---->
+        <ul class="dropdown-menu">
+          <li><a href="#" tabindex="-1" >공지사항</a></li>
+          <li><a href="#" tabindex="-1" >자유게시판</a></li>
+          <li><a href="#" tabindex="-1" >자료실</a></li>
+        </ul>
+        <!---->
+      </div>
+    </div>
+    <p></p>
+    <hr>
+    <!--
+     양쪽 정렬하기 : a 태그로 버튼을 만든 경우 사용가능 (% 비례)
+      class="btn-group-justified"
+     -->
+    <h4>a 태그를 이용한 버튼 그룹의 양쪽 정렬하기</h4>
+    <div class="btn-group btn-group-justified">
+      <a href="#" class="btn btn-default">버튼1</a>
+      <a href="#" class="btn btn-primary">버튼2</a>
+      <a href="#" class="btn btn-success">버튼3</a>
+      <a href="#" class="btn btn-warning">버튼4</a>
+    </div>
+    <p></p>
+    <hr>
+    <h4>button태그로 이루어진 버튼 그룹의 경우에는 양쪽정렬이 적용이 안된다.</h4>
+    <div class="btn-group btn-group-justified">
+      <button type="button" class="btn btn-default">버튼1</button>
+      <button type="button" class="btn btn-primary">버튼2</button>
+    </div>
+    <hr>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

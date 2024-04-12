@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>4.buttongroup_down.html</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <h2>드롭다운 활용 예제 2</h2>
+  <div class="container">
+    <!--
+    1. 다른 버튼과 캐럿을 결합시키는 방법
+      -> 안쪽의 쓸데없는 기존 버튼 그룹을 제거.
+      서브 메뉴가 나오는 위치가 왼쪽메뉴에 치우쳐서 출력(캐럿이 적용된 버튼의 이름을 제거)
+      왼쪽버튼과 캐럿이 결합된 형태
+    -->
+    <h4 class="text-success">분할된 버튼그룹의 구분(색깔)</h4>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">버튼1</button>
+      <button type="button" data-toggle="dropdown"
+              class="btn btn-success dropdown-toggle"><span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" tabindex="-1">공지사항</a></li>
+        <li><a href="#" tabindex="-1">자유게시판</a></li>
+        <li><a href="#" tabindex="-1">자료실</a></li>
+      </ul>
+    </div>
+    <p>
+    <hr>
+    <!--
+    2, 버튼 색깔 부여(btn-접두어)
+    -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">버튼2</button>
+      <button type="button" data-toggle="dropdown"
+              class="btn btn-danger dropdown-toggle"><span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" tabindex="-1">공지사항</a></li>
+        <li><a href="#" tabindex="-1">자유게시판</a></li>
+        <li><a href="#" tabindex="-1">자료실</a></li>
+      </ul>
+    </div>
+    <p>
+    <hr>
+    <!--
+    3. 버튼의 드롭다운의 크기 조절
+    -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default btn-success btn-lg">버튼3</button>
+      <button type="button" data-toggle="dropdown"
+              class="btn btn-danger dropdown-toggle btn-lg" ><span class="caret "></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" tabindex="-1">공지사항</a></li>
+        <li><a href="#" tabindex="-1">자유게시판</a></li>
+        <li><a href="#" tabindex="-1">자료실</a></li>
+      </ul>
+    </div>
+    <p>
+    <hr>
+    <!--
+    4. 드롭다운, 드롭업
+    -->
+    <h4 class="text-success">드롭다운 ▼, 드롭업 ▲</h4>
+    <div class="btn-group dropup">
+      <button type="button" class="btn btn-default btn-muted btn-sm">버튼4</button>
+      <button type="button" data-toggle="dropdown"
+              class="btn btn-muted dropdown-toggle btn-sm" ><span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="#" tabindex="-1">공지사항</a></li>
+        <li><a href="#" tabindex="-1">자유게시판</a></li>
+        <li><a href="#" tabindex="-1">자료실</a></li>
+      </ul>
+    </div>
+    <p>
+    <hr>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

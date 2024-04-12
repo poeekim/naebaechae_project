@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1. ajax의 내부처리 과정소개(매개변수)</title>
+    <script>
+        function loadJsp() {
+            // 1. XHR 객체 얻어오기
+            const xhttp = new XMLHttpRequest();
+            // 추가 사항
+            const params = "?name=" + document.f.name.value;
+            xhttp.open("GET", "test02.jsp" + params, true);
+            xhttp.send();
+            xhttp.onreadystatechange = callBack //콜백함수 ( 괄호쓰면안됨)
+        }
+
+            function callBack() { // 자동으로 전달 받은 경우 호출할 수 있도록 처리
+                if (this.readyState == 4 && this.status == 200) {
+                    alert(this.responseText); // responseTest속성 : 서버로부터 받은 문자열 결과.
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            }
+    </script>
+
+</head>
+<body>
+<form action="" name="f">
+    <input type="text" name="name">
+    <button type="button" onclick="loadJsp()">입력</button>
+    <div id="demo"></div>
+</form>
+</body>
+</html>

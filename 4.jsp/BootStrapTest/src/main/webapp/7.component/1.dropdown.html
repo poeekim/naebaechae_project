@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>드롭 다운 예제</title>
+  <!--
+    drop down : 메뉴를 눌렀을 때 하단으로 값들이 펼쳐지는것.
+                단독 사용이 불가하며, 부트스트랩에 포함된 자바 스크립트와 jQuery 를 같이 사용해야 함.
+                일반적으로 ul과 li 태그로 구성된 리스트 태그에 적용됨 (상단 메뉴에서 자주 사용)
+                하단코드(<script src="../js/bootstrap.min.js"></script>) 와 같이 jQuery 에 관련된 파일을 불러와야 문제없이 실행됨.
+
+    작성 방법 : 1. 드롭다운에서 나오는 메뉴를 감싸주는 선택자 - dropdown
+              .dropup,
+              .dropdown{
+                position:relative; // 상대적인 배치방법
+              }
+              메뉴를 표시 -> role="menu"
+              서브 메뉴(부가메뉴) -> role="menuitem"
+
+              2. 메뉴항목을 안보이게 설정 : ul class="dropdown-menu" == css로 표현하자면 display:none;
+              3. 클릭 했을 때 드롭다운 할 수 있도록 설정 : data-toggle = "dropdown"
+                => 부트스트랩(jQuery와 코딩으로 연결된 내장속성)
+              4. tab 키를 이용해서 특정메뉴를 선택 후 실행 : tabindex = "-1"
+                 tab 키로 여기를 클릭하세요로 이동한 뒤 enter -> 메뉴를 펼칠 수 있도록.
+
+
+  -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dropdown">
+    <a href="#" data-toggle = "dropdown">이곳을 클릭하시오</a> <!-- 이벤트가 발생될 부분-->
+    <ul role="menu" class="dropdown-menu">
+      <li role="presentation">
+        <a href="#" role="menuitem" tabindex="-1" >회원로그인</a>
+      </li>
+      <li role="presentation">
+        <a href="#" role="menuitem" tabindex="-1" >자유게시판</a>
+      </li>
+      <li role="presentation">
+        <a href="#" role="menuitem" tabindex="-1" >설문조사</a>
+      </li>
+    </ul>
+
+  </div>
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table2.html</title>
+
+    <link rel="stylesheet" href="">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <h3>테이블의 부트스트랩 적용 예제</h3>
+  <div class="container">
+    <!-- 1. 기본 모양 ( <table border="1"> ) -->
+    <table border="1">
+      <!-- table title 제목에 적합하게 적용된 태그(<thead></thead>) -->
+      <thead>
+        <tr>
+          <td>번호</td>
+          <td>글제목</td>
+          <td>작성자</td>
+        </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 2. class 이용 ( <table class="table table-striped" > )-->
+    <!-- 테이블의 좌우폭이 자동으로 조절되고, 테이블의 내부(가로선)만 있는 상태 -->
+    <!-- table-striped : 홀수인 row 의 배경색 변경 -->
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 3. table-bordered(기본 테이블은 각행에 밑줄을 테이블 전체에 테두리를 설정한다 )-->
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 4. table-hover : (각행에 마우스를 갖다대면 색상이 변경)-->
+    <h4 class="text-success text-center">class="table-hover"를 준경우</h4>
+    <table class="table  table-hover">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    <br>
+
+    <!-- 5.table-condensed : 각각의 셀의 padding값이 작아져서 타이트한 느낌을 적용(셀과 셀안의 문자열간격) -->
+    <!-- 6.각 행또는 각 셀마다 색상을 부여(행에 부여하는 클래스 선택자) active(회색),success(연두색),warning(겨자색),danger(빨강색)부여 -->
+    <h4 class="text-primary text-right">class="table-condensed"를 준 경우</h4>
+    <table class="table table-bordered table-condensed">
+      <thead>
+      <tr class="active">
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr class="success" >
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr class="warning">
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+      <tr class="danger">
+        <td>3</td>
+        <td>게시판글제목3</td>
+        <td>홍길동3</td>
+      </tr>
+    </table>
+    <br>
+
+    <!--
+            7.class="table-responsive"
+            =>브라우저의 길이에 맞춰 테이블의 크기 및 내용부분또한 가변적으로 변함
+            =>테이블 태그 전체를 <div class="table-responsive">로 깜싸준다.
+            =>폭이 줄어들면 자동으로 스크롤바가 생성
+        -->
+    <h4 class="">class="table-responsive"를 준 경우</h4>
+    <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <td>번호</td>
+        <td>글제목</td>
+        <td>작성자</td>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td>게시판글제목</td>
+        <td>홍길동</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>게시판글제목2</td>
+        <td>홍길동2</td>
+      </tr>
+    </table>
+    </div>
+    <br>
+
+    <!--
+        7.table-bordered table-hover 적용
+        테이블의 넓이는 기본적으로 100%사용하면서 테이블의 테두리에 선 적용,
+             마우스를 갖다댄 행은 색상적용 시켜주는 클래스 선택자)
+    -->
+    <h4 class="text-success text-center">class="table-bordered table-hover"를 준 경우</h4>
+    <div class="table table-bordered table-hover">
+      <table class="table">
+        <thead>
+        <tr class="success">
+          <td>번호</td>
+          <td>글제목</td>
+          <td>작성자</td>
+        </tr>
+        </thead>
+        <tr class="warning">
+          <td>1</td>
+          <td>게시판글제목</td>
+          <td>홍길동</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>게시판글제목2</td>
+          <td>홍길동2</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+  </div>
+</body>
+</html>
