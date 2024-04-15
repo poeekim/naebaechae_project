@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+
+    <title>navigation</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h2>네비게이션 + 드롭다운</h2>
+    <h4>탭형 네비게이션 + 드롭다운</h4>
+    <br>
+    <ul class="nav nav-tabs">
+      <li><a href="#">회원관리</a></li>
+      <li><a href="#">자유게시판</a></li>
+      <li><a href="#">Q&A</a></li>
+<!--      <li><a href="#">사용자</a></li>-->
+      <!-- 네비게이션에 드롭다운을 추가하려면 div 태그 대신에 li 태그로 묶어줘야한다. ( <div> -> <li> 로 변경) -->
+      <li class="dropdown">
+        <a href="#" data-toggle = "dropdown">사용자</a> <!-- 이벤트가 발생될 부분-->
+        <ul class="dropdown-menu">
+          <li><a href="#"   >회원로그인</a></li>
+          <li><a href="#"   >자유게시판</a></li>
+          <li><a href="#"   >설문조사</a></li>
+          <li class="divider"></li>
+          <li><a href="#"   >관리자</a></li>
+        </ul>
+      </li>
+      <br>
+    </ul>
+    <br>    <br>
+    <!-- 알약형 네비게이션 -->
+    <h4>알약형 네비게이션 + 드롭다운</h4>
+    <br>
+    <ul class="nav nav-tabs">
+      <li><a href="#">회원관리</a></li>
+      <li><a href="#">자유게시판</a></li>
+      <!--  <li><a href="#">Q&A</a></li> -->
+      <li class="dropdown">
+        <a href="#" data-toggle = "dropdown">Q&A <span class="caret"></span></a> <!-- 이벤트가 발생될 부분-->
+        <ul class="dropdown-menu">
+          <li><a href="#">JAVA</a></li>
+          <li><a href="#">JSP</a></li>
+          <li><a href="#">Spring</a></li>
+          <li class="divider"></li>
+          <li><a href="#"   >관리자</a></li>
+        </ul>
+      </li>
+      <br>
+    </ul>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
