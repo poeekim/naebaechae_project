@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- <bean id="각 객체를 구분하는 인자명" class="상위패키지명...생성할클래스명" />
+       id값은 관례로 클래스이름을 사용하는것을 원칙
+       <constructor-arg>
+          <value>문자열</value>
+       </constructor-arg>
+    -->
+   <bean id="mBean" class="spring2.MessageBeanImplDI">
+   		<constructor-arg index="0">
+   		     <value>대한민국</value>
+   		</constructor-arg>
+   		<constructor-arg index="1">
+   		     <value>서울</value>
+   		</constructor-arg>
+   		<property name="greeting">
+   		    <value>안녕,</value>
+   		</property>
+<!--	   <property name="outF">
+		   <ref bean="outFile"/>
+	   </property>-->
+	   <property name="outF"/>
+   </bean>
+
+	<!-- setfilePath("c:/webtest/good.txt")
+	메소드를 호출 할 때, 매개변수 값이 String,int<value> 값</value> 일 경우
+	객체를 전달해야한다.  -> <ref bean =" 객체를 얻어올 클래스의 id 값"
+
+	-->
+	<bean id="outFile" class="spring2.OutFileImpl">
+		<property name="filePath">
+			<value>c:/webtest/good.txt</value>
+		</property>
+	</bean>
+</beans>
