@@ -13,8 +13,10 @@ public class HelloApp {
 		// TODO Auto-generated method stub
 		
 		Resource resource=new ClassPathResource("initContext.xml");
+
 		//2.BeanFactory(빈즈공장)을 만들어서 객체를 얻어오기
 		BeanFactory factory=new XmlBeanFactory(resource);
+
 		//3.factory에서 getBean("불러올 객체를 가져올 id값")
 		MessageBeanDI bean=(MessageBeanDI)factory.getBean("mBean");
 		System.out.println("bean=>"+bean);//객체생성(주소값 출력)

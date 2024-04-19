@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean name="systemMonitor" class="spring10.SystemMonitor">
+        <property name="call" ref="phonecall"/>
+    </bean>-->
+
+<!-- byType 으로 설정하기-->
+    <bean name="systemMonitor" class="spring10.SystemMonitor" autowire="byType" /> <!--// autowire="byType"/>-->
+
+    <bean name="phonecall" class="spring10.PhoneCall">
+    </bean>
+
+
+    <!-- spring 11
+        자바에서 객체를 생성하지 못하는 클래스 : 추상클래스
+        스프링컨테이너 : '자기 자신의 해당 bean 객체를 생성하지 말아라' 옵션을 줄 수 있음 -> abstract = true
+                        추상클래스를 상속받는 자식클래스의 객체를 생성하기 위해 필요하다.
+
+        parent ="부모beans의 id" - 설정하면 해당 id를 갖고 있는 부모를 상속받고 있다는 의미.
+    -->
+    <bean id="commonMonitor" class="spring11.SystemMonitor" abstract="true">
+        <property name="sender" ref="smsSender"/>
+        <property name="periodTime" value="10"/>
+    </bean>
+
+    <!-- 자식은 doorMonitor 이고, 부모는 commonMonitor 를 뜻함. 부모의 멤버변수 그대로 사용이 가능(부모의 것을 그대로 100% 사용) -->
+    <bean id="doorMonitor" parent="commonMonitor"/>
+
+    <!-- 오버 라이딩-->
+    <bean id="lobbyMonitor" parent="commonMonitor">
+    <!-- 오버 라이딩 할 메소드 작성 ( value값을 10 -> 30 으로 변경) -->
+        <property name="periodTime" value="30"/>
+    </bean>
+    <bean id="roomMonitor" parent="commonMonitor">
+        <!-- 오버 라이딩 할 메소드 작성 ( value값을 10 -> 40 으로 변경) -->
+        <property name="periodTime" value="40"/>
+    </bean>
+
+
+
+    <bean name="smsSender" class="spring11.SmsSender"/>
+
+</beans>

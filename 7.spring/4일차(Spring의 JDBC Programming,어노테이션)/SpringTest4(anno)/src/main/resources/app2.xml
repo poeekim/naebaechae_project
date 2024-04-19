@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--         anno1
+        @Required @Autowired @Resource 를 사용하기 위해선 xml 파일에 미리 빈즈 클래스를 등록 시켜놔야한다.
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+       -->
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+    <bean id="camera" class="anno1.Camera">
+        <property name="number" value="10"/>
+
+    </bean>
+
+<!--    anno2 -->
+    <bean id="monitor" class="anno2.SystemMonitor">
+<!--        <property name="sender" ref="sender"/>--> <!-- 주석 처리해도 문제가 없음. 이미 SystemMonitor.java 의 setSender 메소드부분에
+ @Required, @Autowired 로 선언했으므로 오류 발생 X -> Autowired를 멤버변수에 선언하면 setSender에 선언할 필요도 없어짐.(주석처리)-->
+    </bean>
+    <bean id="sender" class="anno2.SmsSender"/>
+
+    <!--    anno3 -->
+    <bean id="camera2" class="anno3.Camera" p:number="2"/>
+    <bean id="camera3" class="anno3.Camera" p:number="3"/>
+    <bean id="camera4" class="anno3.Camera" p:number="4"/>
+
+    <bean id="homeController" class="anno3.HomeController"/>
+
+
+<!--    anno4 -->
+    <bean id="camera5" class="anno4.Camera"/>
+
+    <bean id="homeController2" class="anno4.HomeController2"/>
+
+</beans>
