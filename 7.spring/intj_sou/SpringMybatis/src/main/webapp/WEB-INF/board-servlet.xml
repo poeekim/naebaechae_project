@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/" />
+        <property name="suffix"  value=".jsp" />
+    </bean>
+
+    <!-- 2. 요청에 따른 컨트롤러를 누가 맡는지 -->
+    <bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- 3. 요청 명령어에 해당하는 컨트롤러 이용
+        DB연결 BoardDAO 클래스의 객체를 생성하여  db 연결함 -->
+
+
+    <bean id="boardDAO" class="kim.SqlMapBoardDao">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
+
+
+
+    <!-- 1. 글 목록 보기  setDao(BoardDAO dao){this.dao=dao;} == <property name="dao"> -->
+    <bean name="/list.do" class="kim.ListActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+<!-- 2-1. 글쓰기 폼으로 이동-->
+    <bean name="/writeui.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="write"/>
+    </bean>
+
+
+<!--    2-2. 글쓰기(write.do) -->
+    <bean name="/write.do" class="kim.WriteActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 3. 글 상세 보기-->
+    <bean name="/retrieve.do" class="kim.RetrieveActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+    <!-- 4.글 수정하기 (테이블에 입력이 되지만 저장이 되는가?)-->
+    <bean name="/update.do" class="kim.UpdateActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 5. 글 삭제하기 (테이블에 입력이 되지만 저장은 되지 않음) -->
+    <bean name="/delete.do" class="kim.DeleteActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 6. 글 검색하기 (테이블에 입력이 되지만 저장은 되지 않음) searchName, searchValue  -->
+    <bean name="/search.do" class="kim.SearchActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>WEB-INF/jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--
+        2. jdbc.properties 파일에서 각각의 키명에 해당하는 값을 메모리에 저장한다.
+        destroy-method = " 프로그램 종료시 자동으로 호출할 메소드명"
+        close() : 메모리 해제    ${키명} 으로 value 값을 불러옴.
+
+        스프링부트에서는 application.properties 에 설정한다.
+    -->
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+
+        <!-- property 태그 내의  value 값으로 "oracle.jdbc.driver.OracleDriver" 를 적어야하지만, jdbc.properties 내 키값으로 불러오게 설정한다-->
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--
+        3. MyBatis 빈을 등록한다. (SqlSessionFactoryBean) why? SQL 관리를 위함.
+        스프링부트에서는 @Bean 으로 설정할 수 있다.
+        1) cofigLocation : 전체 테이블에 대한 xml파일을 불러올 때 사용한다. (setConfigLocation(경로))
+    -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="WEB-INF/SqlMapConfig.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+
+    </bean>
+
+    <!-- SqlSessionTemplate-->
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <!-- 생성자를 이용한다.-->
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+
+    </bean>
+
+
+
+
+</beans>

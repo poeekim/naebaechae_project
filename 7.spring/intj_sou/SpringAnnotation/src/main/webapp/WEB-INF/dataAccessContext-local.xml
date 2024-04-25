@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+<beans>
+<!-- dataAccessContext-local.xml 이 필요한 이유
+    1. jdbc.properties 파일을 읽어오는 역할을 한다 (경로 지정해서 메모리에 로딩)
+        setLocations("WEB_INF/jdbc.properties")
+    -->
+
+
+</beans>

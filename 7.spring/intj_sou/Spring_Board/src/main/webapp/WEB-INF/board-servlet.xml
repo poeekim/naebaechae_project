@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/" />
+        <property name="suffix"  value=".jsp" />
+    </bean>
+
+    <!-- 2. 요청에 따른 컨트롤러를 누가 맡는지 -->
+    <bean id="defaultHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- 3. 요청 명령어에 해당하는 컨트롤러 이용
+        DB연결 BoardDAO 클래스의 객체를 생성하여  db 연결함 -->
+
+    <bean id="boardDAO" class="kim.BoardDAO"/>
+
+
+    <!-- 1. 글 목록 보기  setDao(BoardDAO dao){this.dao=dao;} == <property name="dao"> -->
+    <bean name="/list.do" class="kim.ListActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+<!-- 2-1. 글쓰기 폼으로 이동-->
+    <bean name="/writeui.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="write"/>
+    </bean>
+
+
+<!--    2-2. 글쓰기(write.do) -->
+    <bean name="/write.do" class="kim.WriteActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 3. 글 상세 보기-->
+    <bean name="/retrieve.do" class="kim.RetrieveActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+    <!-- 4.글 수정하기 (테이블에 입력이 되지만 저장이 되는가?)-->
+    <bean name="/update.do" class="kim.UpdateActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 5. 글 삭제하기 (테이블에 입력이 되지만 저장은 되지 않음) -->
+    <bean name="/delete.do" class="kim.DeleteActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+
+
+    <!-- 6. 글 검색하기 (테이블에 입력이 되지만 저장은 되지 않음) searchName, searchValue  -->
+    <bean name="/search.do" class="kim.SearchActionController">
+        <property name="dao" ref="boardDAO"/>
+    </bean>
+</beans>

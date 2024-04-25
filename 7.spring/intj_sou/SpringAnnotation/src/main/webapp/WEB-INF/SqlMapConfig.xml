@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 경로 지정시 주의할 점
+    * 환경 설정 파일의 경우 : "." 을 이용해 경로를 지정한다. ex) kim.BoardCommand
+
+    * java 파일이 아닐 경우 : "/" 을 이용해 경로를 지정한다. ex) kim/Board.xml
+-->
+
+<!--
+    typeAliases : 자바타입에 대한 간단하고 짧은 이름이며 XML설정에만 관계된다. 이를 통해 클래스 풀네임 대신 지정한 alias로 대신 명시해 줄 수 있다. ==> 필수 태그 X
+                type = "상위패키지명.하위패키지명... 불러올클래스명"
+                VO or DTO클래스 (alias는 별칭을 부여할 수 있는 태그 정보임)
+
+    표현식)
+        <typeAliases>
+            <typeAlias type="com.example.vo.MemberVO" alias="MemberVO" />
+            <typeAlias type="com.example.vo.SampleVO" alias="SampleVO"/>
+        </typeAliases>
+
+    mappers : 접속 시 불러올 테이블에 대한 정보가 담긴 xml 파일을 지정할 때 사용하는 태그
+              표현식)
+              resource ="경로/불러올xml" ( 테이블 갯수만큼 생성하여 등록해야함.)
+-->
+<configuration>
+    <typeAliases>
+        <typeAlias type="kim.BoardCommand" alias="board" />
+    </typeAliases>
+    <mappers>
+        <mapper resource="kim/Board.xml"/>
+        <!--
+        <mapper resource = "kim/example_product.xml"/> // 상품에 대한 테이블
+        <mapper resource = "kim/example_user.xml"/> // 회원에 대한 테이블
+        <mapper resource = "kim/example_order.xml"/> // 주문에 대한 테이블
+        <mapper resource = "kim/example_maker.xml"/>  // 제조사에 대한 테이블
+        ...
+
+        => 사용할 테이블에 대한 정보를 가져오는 것이므로 필수적으로 적어야 한다.
+        -->
+    </mappers>
+</configuration>
