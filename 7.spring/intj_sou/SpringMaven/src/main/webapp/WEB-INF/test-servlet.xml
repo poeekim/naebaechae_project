@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+<!--  요청 명령어에 따른 해당 컨트롤러 클래스를 지정한다(menu.jsp)-->
+    <bean class="kr.spring.tiles.controller.IndexController"/>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/" />
+        <property name="suffix"  value=".jsp" />
+    </bean>
+
+    <bean name="/index.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="list"></property>
+    </bean>
+
+    <!-- 보안으로인해 가상 경로로 지정할 때 -->
+    <bean name="/good/index.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="list2"></property>
+    </bean>
+
+    <bean class="kim.TestController"/>
+<!--    <bean name="/index2.do" class="kim.TestController"/>-->
+</beans>
